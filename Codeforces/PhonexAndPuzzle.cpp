@@ -32,10 +32,6 @@ void solve()
 
 int main() {
   FAST
-#ifndef ONLINE_JUDGE
-  freopen("input.txt", "r", stdin);
-  freopen("output.txt", "w", stdout);
-#endif
 
   ll t = 1;
   cin >> t;
