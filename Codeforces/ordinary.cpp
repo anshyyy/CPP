@@ -16,8 +16,10 @@ int main() {
            if(i/10==0){
                p++;
            }
-           if (i%10==i/10)
+          else
            {
+               int m=i/10;
+
               count++;
            }
            
