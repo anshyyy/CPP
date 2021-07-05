@@ -3,7 +3,7 @@
 #define ll long long int
 #define loop(n) for(int i=0;i<n;i++)
 using namespace std;
-#define MOD 1000000009
+#define MOD 1000000007
 void solve(){ 
      ll n;
      cin>>n;
