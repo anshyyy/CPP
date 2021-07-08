@@ -10,14 +10,14 @@ void solve(){
   {
     ll x = n / 2;
     ll sq = sqrt(x);
-     cout<<sq<<endl;
+   //  cout<<sq<<endl;
     if (sq * sq == x)is = true;
   }
   if (n % 4 == 0)
   {
     ll x = n / 4;
     ll sq = sqrt(x);
-    cout<<sq<<endl;
+   // cout<<sq<<endl;
     if (sq * sq == x)is = true;
   }
   cout << (is ? "YES\n" : "NO\n");
