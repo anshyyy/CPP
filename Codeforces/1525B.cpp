@@ -4,32 +4,17 @@
 #define loop(n) for(int i=0;i<n;i++)
 using namespace std;
 void solve(){ 
-     int n,count=0;
+     int n,count=2;
      cin>>n;
      int arr[n];
      for (int i = 0; i <n; i++)
      {
         cin>>arr[i];
      }
-     int i, j, min_idx;
-    // for (i = 0; i < n-1; i++)
-    // {
-    //     min_idx = i;
-    //     for (j = i+1; j < n; j++)
-    //     if (arr[j] < arr[min_idx])
-    //         min_idx = j;
-    //     swap(arr[min_idx], arr[i]);
-    //     count++;
-    // }
-    for (int i = 1; i <n; i++)
-    {
-        if(arr[i-1]<arr[i]&&arr[i]>arr[i+1]){
-            count++;
-            i++;
-        }
-    }
-    
-     
+     if(is_sorted(arr,arr+n))
+       count=0;  
+     else if(arr[0]==1||arr[n-1]==n) count=1;
+    else if(arr[0]==n&&arr[n-1]==1) count=3; 
      cout<<count<<endl;
      
 }

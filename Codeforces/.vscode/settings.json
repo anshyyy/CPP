@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "PRINTFEX.C": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
