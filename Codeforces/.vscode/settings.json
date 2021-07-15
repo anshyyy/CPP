@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "PRINTFEX.C": "cpp"
+        "PRINTFEX.C": "cpp",
+        "FILE2edited.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
