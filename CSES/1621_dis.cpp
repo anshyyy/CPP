@@ -5,22 +5,18 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n;
-     ll sum=0;
-     cin>>n;
-     int arr[n];
-     loop(i,n){ 
-         cin>>arr[i];
-         sum+=arr[i];
-     }
-     ll r=sum%n;
-     cout<<r*(n-r)<<endl;
-
+     int n;cin>>n;
+     vector<ll>vec(n);
+     set<int>s;
+     loop(i,n){
+         cin>>vec[i];
+         s.insert(vec[i]);
+         }
+         cout<<s.size()<<endl;
 }
 int main() {
-IOS
 int t=1;
-cin>>t;
+//cin>>t;
 while(t--){
  solve(); 
 }

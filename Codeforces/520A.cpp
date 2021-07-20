@@ -5,22 +5,20 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n;
-     ll sum=0;
-     cin>>n;
-     int arr[n];
-     loop(i,n){ 
-         cin>>arr[i];
-         sum+=arr[i];
+     int n;cin>>n;
+     string s;
+     cin>>s;
+     unordered_set<char> mp;
+     for(int i=0;i<n;i++){
+         mp.insert(tolower(s[i]));
      }
-     ll r=sum%n;
-     cout<<r*(n-r)<<endl;
-
+    (mp.size()>=26)?cout<<"YES\n":cout<<"NO\n";
+    // if(mp.size()>=26)cout<<"YES\n";
+    // else cout<<"NO\n";
 }
 int main() {
-IOS
 int t=1;
-cin>>t;
+//cin>>t;
 while(t--){
  solve(); 
 }

@@ -5,24 +5,24 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n;
-     ll sum=0;
-     cin>>n;
-     int arr[n];
-     loop(i,n){ 
-         cin>>arr[i];
-         sum+=arr[i];
-     }
-     ll r=sum%n;
-     cout<<r*(n-r)<<endl;
-
+   ll n;cin>>n;
+	ll ans=0;
+	for (ll i = 2; i * i <= n; i++) {
+    ll j=i;
+		while (n % j == 0) {
+		  ans++;
+			n /= j;
+      j*=i;
+		}
+    while(n%i==0) n/=i;
+	}
+     cout<<ans+(n>1)<<endl;
 }
 int main() {
-IOS
 int t=1;
-cin>>t;
+//cin>>t;
 while(t--){
  solve(); 
 }
-     return 0;
+   return 0;
 }
