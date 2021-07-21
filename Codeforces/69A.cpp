@@ -5,19 +5,23 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n;cin>>n;
-     string s;
-     cin>>s;
-     unordered_set<char> mp;
-     for(int i=0;i<n;i++){
-         mp.insert(tolower(s[i]));
+     int n,p=0,q=0,r=0;bool flag=true;
+     cin>>n;
+     while(n--){
+         int x,y,z;
+         cin>>x>>y>>z;
+         p+=x;
+         q+=y;
+         r+=r;
      }
-    (mp.size()>=26)?cout<<"YES\n":cout<<"NO\n";
-   
+      if(p+q+r!=0)flag=false;
+         cout<<p<<q<<r<<endl;
+     flag?cout<<"YES\n":cout<<"NO\n";
+
 }
 int main() {
 int t=1;
-//cin>>t;
+cin>>t;
 while(t--){
  solve(); 
 }
