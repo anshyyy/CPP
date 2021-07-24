@@ -5,21 +5,25 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n,p=0,q=0,r=0;bool flag=true;
+     ll n;
+     ll a=0,b=0;
      cin>>n;
-     while(n--){
-         int x,y,z;
-         cin>>x>>y>>z;
-         p+=x;
-         q+=y;
-         r+=r;
-     }
-      if(p+q+r!=0)flag=false;
-       //  cout<<p<<q<<r<<endl;
-     flag?cout<<"YES\n":cout<<"NO\n";
-
+    if(n%3==0){
+        a=b=n/3;
+    }
+    else if((n-1)%3==0){
+        b=(n-1)/3;
+        a=b+1;
+    }
+    else if((n-2)%3==0){
+        a=(n-2)/3;
+        b=a+1;
+    }
+    cout<<a<<" "<<b<<endl;
+     
 }
 int main() {
+IOS
 int t=1;
 cin>>t;
 while(t--){

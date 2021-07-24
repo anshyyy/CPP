@@ -5,18 +5,17 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n,p=0,q=0,r=0;bool flag=true;
-     cin>>n;
-     while(n--){
-         int x,y,z;
-         cin>>x>>y>>z;
-         p+=x;
-         q+=y;
-         r+=r;
+     int n;
+     string s;
+     cin>>n>>s;
+     if(n==2&&s[0]>=s[1]){
+         cout<<"NO\n";
      }
-      if(p+q+r!=0)flag=false;
-       //  cout<<p<<q<<r<<endl;
-     flag?cout<<"YES\n":cout<<"NO\n";
+     else{
+         cout<<"YES\n";
+         cout<<2<<"\n";
+         cout<<s[0]<<" "<<s.substr(1)<<endl;
+     }
 
 }
 int main() {
