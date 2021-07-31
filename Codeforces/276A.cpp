@@ -13,8 +13,7 @@ void solve(){
       cin>>f>>t;
       if(t>k){
        joy=f-(t-k);
-       //cout<<joy<<endl;
-      }
+       //cout<<joy<<endl;      }
       else {
           joy=f;
          // cout<<joy<<endl;
@@ -27,7 +26,7 @@ void solve(){
 }
 int main() {
 int t=1;
-cin>>t;
+//cin>>t;
 while(t--){
  solve(); 
 }
