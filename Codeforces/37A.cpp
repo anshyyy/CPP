@@ -5,17 +5,16 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n;
+     int a, n,maxi=0,arr[1008]={};
      cin>>n;
-     int arr[n];
-     loop(i,n)cin>>arr[i];
-     sort(arr,arr+n);
-     int sum=0;
-     for (int i = 0; i < n; i+=2)
-     {
-         sum+=abs(arr[i]-arr[i+1]);
-     }
-     cout<<sum<<endl;
+     set<ll>s;
+    loop(i,n){
+        cin>>a;
+        s.insert(a);
+        arr[a]++;
+        maxi=max(maxi,arr[a]);
+    }
+    cout<<maxi<<" "<<s.size()<<endl;
      
 }
 int main() {
