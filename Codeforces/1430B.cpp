@@ -5,18 +5,19 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n,k;
+     ll n,k;
      cin>>n>>k;
-     int arr[n];
+     ll arr[n];
      loop(i,n) cin>>arr[i];
-     int i=0;
+     sort(arr,arr+n);
+     int i=n-2;
      while(k--){
         arr[n-1]+=arr[i];
-        arr[i]-=arr[i];
+       // arr[i]-=arr[i];
       //  cout<<i<<" "<<endl;;
-        i++;
+        i--;
      }
-     cout<<arr[n-1]-arr[0]<<endl;
+     cout<<*max_element(arr,arr+n)<<endl;
 }
 int main() {
 int t=1;
