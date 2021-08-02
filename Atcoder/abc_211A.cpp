@@ -5,10 +5,10 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-    ll n,a,x,y;
-  cin >> n >> a >> x >> y;
-  if(n <= a) cout << n*x << endl;
-  else cout << a*x + (n-a)*y << endl;
+     float a,b;
+     cin>>a>>b;
+     float x=(a-b)/3;
+     cout<<x+b<<endl;
 }
 int main() {
 int t=1;
