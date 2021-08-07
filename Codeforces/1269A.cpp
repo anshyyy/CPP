@@ -5,17 +5,15 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n,k,l,c,d,p,nl,np;
-     cin>>n>>k>>l>>c>>d>>p>>nl>>np;
-     k=k*l;
-     nl=k/nl;
-     c=c*d;
-     p=p/np;
-     cout<<min({nl,c,p})/n<<endl;
+     ll n;
+     cin>>n;
+     cout<<9*n<<" "<<8*n<<endl;
+
 }
 int main() {
 int t=1;
-//cin>>t;
+
+cin>>t;
 while(t--){
  solve(); 
 }
