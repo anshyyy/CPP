@@ -23,7 +23,6 @@ void solve(){
             break;
         }
     }
-    cout<<id;
     for (int i = id+1; i <s.size(); i++)
     {
         if(s[i]!=t[i]){
