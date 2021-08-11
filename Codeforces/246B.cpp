@@ -5,31 +5,23 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n,k;
-     int sum=0,mini=-1,id=0,j;
-     cin>>n>>k;
-     int arr[n];
+     int n;
+     cin>>n;
+     int arr[n],sum=0;
      loop(i,n){
          cin>>arr[i];
-        if(i<k)sum+=arr[i];
-        else if(i>=k){
-            if(sum<=mini||mini==-1)
-             j=i+1,mini=sum;
- 
-             sum=sum-arr[i-k]+arr[i];
-        }
+         sum+=arr[i];
      }
- 
-    if(sum<=mini||mini==-1){
-        j=n+1;
-    }
-    cout<<j-k;
-    
- 
+     if(sum%n==0){
+         cout<<n<<endl;
+     }
+     else{
+         cout<<n-1<<endl;
+     }
 }
 int main() {
 int t=1;
-//cin>>t;
+cin>>t;
 while(t--){
  solve(); 
 }
