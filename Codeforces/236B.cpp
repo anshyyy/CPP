@@ -20,7 +20,7 @@ void solve(){
         for(j = i; j <= m; j += i)
             arr[j]++;
     }
-    loop(i,m+5)cout<<arr[i]<<" " ;
+   // loop(i,m+5)cout<<arr[i]<<" " ;
 
     ll ans = 0, mod = 1073741824;
     for(i = 1; i <= a; i++)
