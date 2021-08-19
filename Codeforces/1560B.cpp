@@ -25,6 +25,7 @@ void solve(){
   cout << ans<<endl;
 }
 int main() {
+IOS
 int t=1;
 cin>>t;
 while(t--){
