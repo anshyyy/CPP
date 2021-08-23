@@ -5,14 +5,14 @@
 typedef long long int ll;
 using namespace std;
 void solve(){ 
-     vector<bool> prime(10000000,false);
-     prime[0]=prime[1]=true;
+     vector<bool> prime(10000000,true);
+     prime[0]=prime[1]=false;
      for (ll i = 2; i*i <=10000000; i++)
      {
-         if(prime[i]==false){
+         if(prime[i]==true){
              for (ll j = i*i; j <=10000000; j+=i)
              {
-                  prime[j]=true;
+                  prime[j]=false;
              }
              
          }
@@ -20,11 +20,12 @@ void solve(){
      ll n,t;
      cin>>n;
      ll x;
+     
      for (int i = 0; i <n; i++)
      {
          cin>>x;
          t=sqrt(x);
-         if(t==sqrt(x)&&prime[t]==false) cout<<"YES\n";
+         if(t==sqrt(x)&&prime[t]==true) cout<<"YES\n";
          else cout<<"NO\n";
      }
      
