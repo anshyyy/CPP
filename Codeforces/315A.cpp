@@ -8,20 +8,30 @@ void solve(){
      int n,count=0;
      cin>>n;
      pair<int,int>arr[n];
-     map<int,int>mp;
+     int ckc[200]={};
      loop(i,n){
         int a,b;
         cin>>a>>b;
-        mp[a]++;
         arr[i]=make_pair(b,a);
 
      }
      
      for (int i = 0; i <n; i++)
      {
-       if(arr[i].second!=arr[i].first && mp[arr[i].first]>0) count++;  
+         for(int j=0;j<n;j++){
+             if(ckc[j]==1)continue;
+             if(j==i)continue;
+             if(arr[j].second==arr[i].first ){
+                   ckc[j]=1; 
+           }
+         }
      }
-     cout<<n-count<<endl;
+     for (int i = 0; i <n; i++)
+     {
+         if(ckc[i]==0)count++;
+     }
+     
+     cout<<count<<endl;
 }
 int main() {
 int t=1;
