@@ -5,42 +5,29 @@
 typedef long long ll;
 using namespace std;
 void solve(){
-    int a=0; 
+    bool flag=false; 
     string s,t;
     cin>>s>>t;
-   for (int i = 0; i <s.size(); i++)
-   {
-       if(t[0]==s[i]){ 
-           a=i;
-           break;
-       }
-   }
-   bool flag=true;
-   int l=s.size()-1;
-   for ( int i = 1; i <t.size()-1; i++)
-   {
-       if(t[i]==s[a+1]){
-           a++;
-           l--;
-         //cout<<l<<" +";
-           if(l<=0){
-               flag=false;
-           }
-       }
-       else if(t[i]==s[a-1]){
-           a--;
-           l--;
-           //cout<<l<<" -"<<endl;;
-           if(l<=0){
-               flag=false;
-           }
-       }
-       else{
-           flag=false;
-           break;
-       }
-   }   
-    flag?cout<<"YES\n":cout<<"NO\n";
+    int n=s.size();
+    int m=t.size();
+    for (int i = 0; i <n; i++)
+    {
+        for (int j = 0; j <n-i; j++)
+        {
+            int k=m-1-j;
+            if(i+j<k){
+                continue;
+            }
+
+            int a=i;
+            int r=i+j;
+            int a2=r-k;
+            if(s[a:r+1]+s[])
+        }
+        
+    }
+    
+   
 }
 int main() {
 int t=1;
