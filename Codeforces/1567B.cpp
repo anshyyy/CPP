@@ -10,27 +10,32 @@ int ar[N];
  void solve(){
     int a, b; 
     cin >> a >> b;
-    int x = ar[a];
+   //  int x = ar[a];
     
-    if (x == b)cout << a << "\n";
-    else if ((x ^ b) == a)
-    cout << a + 2 << endl;
-    else cout << a + 1 << "\n";
+   //  if (x == b)cout << a << "\n";
+   //  else if ((x ^ b) == a)
+   //  cout << a + 2 << endl;
+   //  else cout << a + 1 << "\n";
+   int x;
+   if(a%4==1){x=a-1;}
+   else if(a%4==2) x=1;
+   else if(a%4==3) x=a;
+   else x=0;
+
+   if(x==b) cout<<a<<endl;
+   else if((x^b)!=a) cout<<a+1<<endl;
+   else cout<<a+2<<endl;
+
  }
 int main() {
-    
     IOS
-
     for (int i = 1; i < N; i++) {
     ar[i] = ar[i - 1] ^ (i - 1);
     }
-    
     int t;
     cin >> t;
     while(t--){
        solve();
     }
-    
-    
     return 0;
 }
