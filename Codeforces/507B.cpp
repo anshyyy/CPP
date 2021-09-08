@@ -4,17 +4,17 @@
 #define for1(i,n) for(int i=1;i<=n;i++)
 typedef long long ll;
 using namespace std;
-float distance(int x1, int y1, int x2, int y2)
+double distance(int x1, int y1, int x2, int y2)
 {
     return sqrt(pow(x2 - x1, 2) +
                 pow(y2 - y1, 2) * 1.0);
 }
 void solve(){ 
-     int r,x1,y1,x2,y2;
+     ll r,x1,y1,x2,y2;
      double d;
      cin>>r>>x1>>y1>>x2>>y2;
      d=distance(x1,y1,x2,y2);
-     cout<<ceil(d/(float)(2*r))<<endl;
+     cout<<ceil(d/(double)(2*r))<<endl;
 }
 int main() {
 int t=1;
