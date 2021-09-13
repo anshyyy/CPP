@@ -5,20 +5,19 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     ll n,s;
-     cin>>n>>s;
-     
-     if(n==1) cout<<s<<endl;
-     else if(s==1) cout<<"0\n";
-     else{
-         int t;
-         if(n%2==0){
-             t=(s/((n/2)+1));
-         }
-         else t= s/(round(n/(2*1.0)));
-
-         cout<<t<<endl;
+     string s;
+     cin>>s;
+     int z=count(s.begin(),s.end(),'0');
+     if(z==0){
+         cout<<"0";
+         return;
      }
+     int a=s.find('0');
+     
+     int b=s.rfind('0');
+    
+     if(b-a+1==z) cout<<"1\n";
+     else cout<<"2\n";
 }
 int main() {
 int t=1;
