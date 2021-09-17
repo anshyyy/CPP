@@ -15,7 +15,6 @@ void solve(){
          if(arr[i]==1)one++;
          else two++;
      }
-     vector<int> b(n,0);
      int i=0;
      if(two)
        arr[i++]=2;
@@ -37,10 +36,10 @@ void solve(){
     
      loop(i,n)
      cout<<arr[i]<<" ";
+     cout<<endl;
 }
 int main() {
 int t=1;
-cin>>t;
 while(t--){
  solve(); 
 }
