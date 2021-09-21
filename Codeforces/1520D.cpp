@@ -5,18 +5,16 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n,res=0;
+     ll n,res=0;
      cin>>n;
      map<int,int>mp;
-     for (int i = 0; i <n; i++)
+     for (ll i = 0; i <n; i++)
      {
         int x;
         cin>>x;
         x-=i;
         res+=mp[x];
-        cout<<res<<endl;
         mp[x]++;
-        cout<<mp[x]<<endl;
      }
      cout<<res<<endl;
      
