@@ -25,6 +25,7 @@ void solve(){
          
      });
      for(const auto &s : arr) cout<<s<<endl;
+     
 
 }
 int main() {
