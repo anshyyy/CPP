@@ -5,24 +5,26 @@
 typedef long long ll;
 using namespace std;
 void solve(){ 
-     int n;
-     cin>>n;
-     vector<int> arr(n);
+     int n,m;
+     cin>>n>>m;
+     int arr[n];
      loop(i,n)cin>>arr[i];
-     sort(arr.begin(),arr.end(),greater<int>());
-     ll sum=0;
+     vector<int>neg(1000,0);
      for (int i = 0; i <n; i++)
      {
-         sum += arr[i]*arr[i]*(1-i%2*2);
+         if(arr[i]<0){
+             neg.push_back(arr[i]);
+         }
      }
-     double pi = 3.1415926536;
-     cout<<fixed<<setprecision(10)<<pi*sum<<endl;
-     
-
+     sort(neg.begin(),neg.end());
+     int ans=0;
+    loop(i,m){
+         ans+=abs(neg[i]);
+    }
+     cout<<ans<<endl;
 }
 int main() {
 int t=1;
-cin>>t;
 while(t--){
  solve(); 
 }
