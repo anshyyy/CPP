@@ -12,10 +12,8 @@ void solve(){
      cin>>x;
      ll sum=accumulate(arr.begin(),arr.end(),0LL);
      ll r = ceil((double)x/(double)sum);
-     cout<<r<<" "<<sum<<endl;
      sum=sum*r;
      ll ans= r*n;
-     cout<<sum<<" "<<ans<<endl;
      int i=0;
      while(true){
       if(sum>x){
