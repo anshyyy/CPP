@@ -15,7 +15,6 @@ void solve(){
      ll ans=0LL;
      loop(i,0,s.size())
         ans = (2LL*ans +(ll)(s[i]-'0'));
-    cout<<ans<<endl;
     ll p =1LL;
     loop(i,0,s.size()){
         p = p<<1;
