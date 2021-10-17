@@ -11,27 +11,17 @@ void solve(){
      ll arr[k];
      loop(i,0,k)cin>>arr[i];
      sort(arr,arr+k);
-     ll res=0,cat=0;
-     for (int i =k-1; i >= 0; i--)
+     ll cat=0,count=0;
+     for (int i = k-1; i >=0; i--)
      {
-         if(res+n-arr[i]<=n){
-             cat++;
-             res+=n-arr[i];
-         }
-         else break;
+         ll ans = arr[i];
+         if(ans<=cat)break;
+         ll res = n - ans;
+         cat+=res;
+        count++;
      }
-     ll answ =cat ,id=0,rem=k-cat;
-     for (int i =k-cat; i <k; i++)
-     {
-         if(id>=arr[i]){
-             id+=n-arr[rem++];
-             answ--;
-         }
-         id+=n-arr[i];
-     }
-     cout<<answ<<endl;
-     
-
+     cout<<count<<endl;
+      
 }
 int main() {
 int t=1;
