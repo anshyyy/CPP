@@ -10,14 +10,22 @@ void solve(){
      cin>>n;
      int p;
      cin>>p;
-     vector<int>arr(1000);
-     loop(i,0,p)cin>>arr[i];
+     vector<int>arr;
+     loop(i,0,p){
+         int x;
+         cin>>x;
+         arr.push_back(x);   
+     }
      int q;
      cin>>q;
-     loop(i,0,q)cin>>arr[i];
+     loop(i,0,q){
+         int x;
+         cin>>x;
+         arr.push_back(x);
+     }
      sort(arr.begin(),arr.end());
      ll count =0;
-     loop(i,0,arr.size()){
+     loop(i,0,arr.size()-1){
           if(arr[i]!=arr[i+1]){
              count++;
           }
