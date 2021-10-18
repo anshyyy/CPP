@@ -1,5 +1,5 @@
 t = int(input())
-while(t>=0):
+while(t>0):
     a,b,n=map(int,input().split())
     sum =0
     ans=0
@@ -14,7 +14,7 @@ while(t>=0):
             ans+=1
         if sum>n:
             break
-    t = t -1
+    t=t-1
     print(ans)
       
 
