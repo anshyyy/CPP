@@ -26,8 +26,7 @@ void solve(){
                  b[j]=1000;
                  break;
              }
-         }
-         
+         }   
      }
      cout<<count<<endl;
 
