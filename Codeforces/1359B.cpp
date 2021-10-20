@@ -29,11 +29,6 @@ void solve()
                 ans+=x;
             }
     }
-    // if(ans==0||ans1==0){
-    //     cout<<max(ans,ans1)<<endl;
-    //     return;
-    // }
-    // cout<<ans1<<" "<<ans<<endl;
     cout<<min(ans1,ans)<<endl;
 }
 int main()

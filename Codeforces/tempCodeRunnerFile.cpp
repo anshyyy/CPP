@@ -1,16 +1,26 @@
-ll secondlar(vector<ll> &arr[],long long int n) {
-//     ll largest = 0, secondLargest = -1;
-//     for (int i = 1; i < n; i++) {
-//         if (arr[i] > arr[largest])
-//             largest = i;
-//     }
-//     for (int i = 0; i < n; i++) {
-//         if (arr[i] != arr[largest]) {
-//             if (secondLargest == -1)
-//                 secondLargest = i;
-//             else if (arr[i] > arr[secondLargest])
-//                 secondLargest = i;
-//         }
-//     }
-//     return secondLargest;
-// }
+ if(i==n-1&&j!=m-1&&i!=j){
+        //      if(b[j]==0){
+        //          arr.push_back(b[j]);
+        //          count++;
+        //          j++;
+        //      }
+        //      if(b[j]>count){
+        //          cout<<"-1\n";
+        //          return;
+        //      }
+        //      arr.push_back(b[j]);
+        //      j++;
+        //  }
+        //  if(j==m-1&&i!=n-1&&i!=j){
+        //      if(a[i]==0){
+        //          arr.push_back(a[i]);
+        //          count++;
+        //          i++;
+        //      }
+        //      if(a[i]>count){
+        //          cout<<"-1\n";
+        //          return;
+        //      }
+        //      arr.push_back(a[i]);
+        //      i++;
+        //  }
