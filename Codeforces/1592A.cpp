@@ -1,48 +1,33 @@
 #include <bits/stdc++.h>
-#define IOS ios_base::sync_with_stdio(false); cin.tie(NULL);
-#define loop(i,n) for(int i=0;i<n;i++)
-#define for1(i,n) for(int i=1;i<=n;i++)
+#define IOS ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define loop(i,a,n) for(int i=a;i<n;i++)
 typedef long long ll;
+const ll INF = 1e9+7;
+const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n,h,sum=0;;
+     ll n,h,count=0;
      cin>>n>>h;
-     vector<ll>arr(n);
-     loop(i,n)cin>>arr[i];
-     sum=accumulate(arr.begin(),arr.end(),0);
-     if(sum<=h){
-         cout<<n<<endl;
+     vector<int>arr(n);
+     loop(i,0,n)cin>>arr[i];
+     sort(arr.begin(),arr.end(),greater<int>());
+     ll a=arr[0];
+     ll b = arr[1];
+     if(h<=a){
+         cout<<"1\n";
          return;
      }
-     ll res=0,ab;
-     sort(arr.begin(),arr.end(),greater<ll>());
-     for (ll i = 0; i < n; i++)
-     {
-        h-=arr[i];
-       // cout<<h<<" ";
-        if(h<=0){
-            ab=i+1;
-            break;
-        }
-     }
-     cout<<ab<<endl;
-    // ll maxi=*max_element(arr.begin(),arr.end()),answ=0;
-    // if(maxi>=h){
-    //     cout<<1<<endl;
-    //     return;
-    // }
-    // sort(arr.begin(),arr.end(),greater<ll>());
-    // for (ll i = 1; i <n; i++)
-    // {
-    //     maxi+=arr[i];
-    //     if(maxi>=h){
-    //         answ=i+1;
-    //         break;
-    //     }
-    // }
-    // cout<<answ<<endl;
-    
-     
+     count = a+b;
+     ll ans = 2*(h/count);
+      h=h%count;
+      if(h==0){
+          ans+=0;
+      }
+      else if(h<=a){
+        ans+=1;
+      }
+      else ans+=2;
+     cout<<ans<<endl;
 }
 int main() {
 int t=1;
