@@ -1,0 +1,1 @@
+{"name":"Local: 1594C","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1594C.cpp","tests":[{"id":1634999139843,"input":"5\n4 a\naaaa\n4 a\nbaaa\n4 b\nbzyx\n3 n\nacc\n3 w\nccc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1594C.cpp","group":"local","local":true}
