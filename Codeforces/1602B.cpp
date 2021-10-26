@@ -20,16 +20,16 @@ void solve(){
         for (int i = 0; i < n; i++) {
             freq[a[i]]++;
         }
-        loop(i,0,n+1)cout<<freq[i]<<" ";
-        cout<<endl;
+       // loop(i,0,n+1)cout<<freq[i]<<" ";
+       // cout<<endl;
  
         for (int i = 0; i < n; i++) {
             a[i] = freq[a[i]];
         }
-        loop(i,0,n)cout<<a[i]<<" ";
-        cout<<endl;
+       // loop(i,0,n)cout<<a[i]<<" ";
+       // cout<<endl;
         loop(i,0,n)cout<<v[i]<<" ";
-        cout<<endl;
+       // cout<<endl;
  
         v[k] = a;
        
