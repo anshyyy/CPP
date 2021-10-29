@@ -28,11 +28,6 @@ void solve(){
          ans=min(ans,a[i].second+mini[i]);
      }
      cout<<ans<<endl;
-
-     
-    
-     
-     
 }
 int main() {
 int t=1;
