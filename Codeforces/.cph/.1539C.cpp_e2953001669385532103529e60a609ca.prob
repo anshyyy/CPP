@@ -1,0 +1,1 @@
+{"name":"Local: 1539C","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1539C.cpp","tests":[{"id":1636258427702,"input":"3\n8 2 3\n1 1 5 8 12 13 20 22\n13 0 37\n20 20 80 70 70 70 420 5 1 5 1 60 90\n10 4 1\n10 1 6 10 1 1 6 8 6 8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1539C.cpp","group":"local","local":true}
