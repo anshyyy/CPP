@@ -10,20 +10,16 @@ void solve(){
      cin>>n;
      vector<ll>arr(n);
      loop(i,0,n)cin>>arr[i];
-     sort(arr.begin(),arr.end());
-     for (int i = 0; i < n-1; i++)
+     ll temp =1;
+     for (int i = 0; i < n; i++)
      {
-         if(arr[i]%2==0){
-             int x = arr[i];
-             while(x>1){
-                 x=x/2;
-                 arr[i]=x;
-                 arr[n-1]=arr[n-1]*2;
-             }
+         while(arr[i]%2==0){
+             arr[i]/=2;
+             temp*=2;
          }
      }
-    //  for(int x:arr)cout<<x<<" ";
-    //  cout<<endl;
+     sort(arr.begin(),arr.end());
+     arr[n-1]*=temp;
      ll sum = accumulate(arr.begin(),arr.end(),0LL);
      cout<<sum<<endl;
      
