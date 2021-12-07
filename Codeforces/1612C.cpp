@@ -8,15 +8,25 @@ using namespace std;
 void solve(){ 
      ll k ,x;
      cin>>k>>x;
-     ll cnt = (k*(k+1))/2;
-     ll res = ceil((sqrt(1-(8*x))-1)/2);
-     if(k*k<=x){
-         cout<<2*k-1<<endl;
+     ll ans = 0;
+     ll l = 1,r=2*k-1;
+     ll total = k*k;
+     while(l<=r){
+         ll mid = (l+r)/2;
+         ll req = 0;
+         if(mid>k){
+             ll diff = mid-k;
+             ll val = k-diff;
+             req = total-(val*(val+1))/2;
+         }
+         else req = (mid*(mid-1))/2;
+         if(x>req){
+             ans = mid;
+             l = mid+1;
+         }
+         else r = mid -1;
      }
-     else if(cnt>x){
-         cout<<res<<endl;
-     }
-     else cout<<(2*k-1)-res<<endl;
+     cout<<ans<<endl;
 
 }
 int main() {
