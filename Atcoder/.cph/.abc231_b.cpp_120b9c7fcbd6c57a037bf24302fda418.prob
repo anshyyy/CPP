@@ -1,0 +1,1 @@
+{"name":"Local: abc231_b","url":"d:\\C++\\CPP\\CPP\\Atcoder\\abc231_b.cpp","tests":[{"id":1639225641210,"input":"3\n5\nsnuke\nsnuke\ntakahashi\ntakahashi\ntakahashi\n\n5\ntakahashi\ntakahashi\naoki\ntakahashi\nsnuke\n\n1\na\n\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Atcoder\\abc231_b.cpp","group":"local","local":true}

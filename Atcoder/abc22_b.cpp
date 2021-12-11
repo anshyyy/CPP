@@ -10,7 +10,7 @@ void solve(){
      vector<int>arr(n);
      loop(i,n){
          cin>>arr[i];
-         if(arr[i]>x){
+         if(arr[i]>=x){
              count++;
          }
      }
