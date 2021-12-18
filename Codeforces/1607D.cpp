@@ -30,10 +30,10 @@ void solve(){
         }
     }
     cout<< (is? "YES\n":"NO\n");
-      loop(i,0,n){
-         cout<<a[i].first<<" "<<a[i].second<<" ";
-         cout<<endl;
-     }
+    //   loop(i,0,n){
+    //      cout<<a[i].first<<" "<<a[i].second<<" ";
+    //      cout<<endl;
+    //  }
 }
 int main() {
 int t=1;
