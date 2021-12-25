@@ -1,0 +1,1 @@
+{"name":"Local: abc233_d","url":"d:\\C++\\CPP\\CPP\\Atcoder\\abc233_d.cpp","tests":[{"id":1640436908330,"input":"2\n6 5\n8 -3 5 7 0 -4\n2 -1000000000000000\n1000000000 -1000000000","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Atcoder\\abc233_d.cpp","group":"local","local":true}
