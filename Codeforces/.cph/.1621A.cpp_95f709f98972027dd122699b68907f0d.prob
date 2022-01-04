@@ -1,0 +1,1 @@
+{"name":"Local: 1621A","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1621A.cpp","tests":[{"id":1641222123513,"input":"7\n3 2\n3 3\n1 1\n5 2\n7 4\n5 3\n40 33","output":""},{"id":1641224084789,"input":"3\n2 2\n2 3\n5 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1621A.cpp","group":"local","local":true}
