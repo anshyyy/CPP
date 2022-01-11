@@ -17,34 +17,25 @@ void solve(){
          while(arr[i]>n){
              arr[i]/=2;
          }
-         while(s.find(arr[i])!=s.end()&&arr[i]>0){
-                arr[i]/=2;
+         while(s.find(arr[i])!=s.end()){
+             arr[i]/=2;
          }
-        if(arr[i]==0) flag1 = false;
-        else s.insert(arr[i]);
+         if(arr[i]==0) flag = false;
+         else s.insert(arr[i]);
      }
-     sort(arr.begin(),arr.end());
-     for (int i = 0; i < n; i++)
-     {
-         if(arr[i]<i+1){
-             flag = false;
-             break;
-         }
-         else {
-             while(arr[i]>=i+1){
-                 arr[i]/=2;
-             }
-             if(arr[i]!=i+1){
-                 flag = false;
-                 break;
-             }
-         }
-         
-     }
-     if(flag==false)cout<<"NO\n";
-     else cout<<"YES\n";
-     
-
+    //  for (int i = 0; i < n; i++)
+    //      cout<<arr[i]<<" ";
+    //  cout<<endl;
+      sort(arr.begin(),arr.end());
+      for (int i = 0; i <n; i++)
+      {
+          if(arr[i]!=i+1){
+              flag1= false;
+              break;
+          }
+      }
+      if(!flag||!flag1) cout<<"NO\n";
+      else cout<<"YES\n";
      
 }
 int main() {
