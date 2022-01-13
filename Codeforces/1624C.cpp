@@ -23,9 +23,6 @@ void solve(){
          if(arr[i]==0) flag = false;
          else s.insert(arr[i]);
      }
-    //  for (int i = 0; i < n; i++)
-    //      cout<<arr[i]<<" ";
-    //  cout<<endl;
       sort(arr.begin(),arr.end());
       for (int i = 0; i <n; i++)
       {

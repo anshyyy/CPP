@@ -1,1 +1,0 @@
-{"name":"Local: 1173A","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1173A.cpp","tests":[{"id":1633319324213,"input":"5\n3 7 0\n2 0 1\n1 1 0\n0 0 1\n12 1 11","output":"-\n+\n0\n?\n?"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1173A.cpp","group":"local","local":true}

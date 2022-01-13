@@ -1,1 +1,0 @@
-{"name":"Local: 1494A","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1494A.cpp","tests":[{"id":1633975173681,"input":"4\nAABBAC\nCACA\nBBBBAC\nABCA\n","output":"YES\nYES\nNO\nNO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1494A.cpp","group":"local","local":true}
