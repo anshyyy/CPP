@@ -19,7 +19,7 @@ void solve(){
      {
          for (int d = l[i]; d <=r[i]; d++)
          {
-             cout<<d<<endl;
+            // cout<<d<<endl;
             if((d==l[i]||mark[l[i]][d-1])&&(d==r[i]||mark[d+1][r[i]])){
                 cout<<l[i]<<" "<<r[i]<<" "<<d<<endl;
                 break;
