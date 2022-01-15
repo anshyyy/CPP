@@ -6,20 +6,19 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-  string x;
-  cin >> x;
-  int s=0,c=0;
-  for(auto &nx : x){s+=(nx-'0');}
-  string res;
-  for(int i=x.size()-1;;i--){
-    c+=s;
-    res.push_back('0'+(c%10));
-    c/=10;
-    if(i>=0){s-=(x[i]-'0');}
-    if(i<=0 && c==0){break;}
-  }
-  reverse(res.begin(),res.end());
-  cout << res << '\n';
+    ll n ;
+    cin>>n;
+    vector<ll>arr(n);
+    loop(i,0,n)cin>>arr[i];
+    ll pos=-1;
+    for (int i = 0; i <n; i++)
+    {
+        if(pos<arr[i])
+          pos = arr[i];
+        else break;
+    }
+    
+    cout<<pos<<endl;
 }
 int main() {
 int t=1;
