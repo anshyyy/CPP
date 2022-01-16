@@ -5,7 +5,7 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
-ll pre[2000005][31];
+ll pre[200005][31];
 void prec(){
     ll N = 2e5+5;
     for (int i = 0; i < N; i++)
