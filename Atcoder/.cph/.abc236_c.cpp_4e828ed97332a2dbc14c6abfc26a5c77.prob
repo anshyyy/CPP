@@ -1,0 +1,1 @@
+{"name":"Local: abc236_c","url":"d:\\C++\\CPP\\CPP\\Atcoder\\abc236_c.cpp","tests":[{"id":1642940711426,"input":"2\n5 3\ntokyo kanda akiba okachi ueno\ntokyo akiba ueno\n\n7 7\na t c o d e r\na t c o d e r\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Atcoder\\abc236_c.cpp","group":"local","local":true}
