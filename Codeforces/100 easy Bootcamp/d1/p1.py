@@ -1,5 +1,3 @@
-from audioop import reverse
-
 
 n = int(input())
 arr = [int(x) for x in input().split()]
