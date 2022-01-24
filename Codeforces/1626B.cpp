@@ -13,7 +13,7 @@ void solve(){
     for (int i = 0; i <s.size()-1; i++)
     {
         if(s[i]-'0'+s[i+1]-'0'>=10){
-            pos = i;
+            pos = i; 
         }
     }
     loop(i,0,pos)cout<<s[i];
