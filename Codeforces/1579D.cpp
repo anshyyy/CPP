@@ -14,7 +14,7 @@ void solve(){
         int n;
         cin >> n;
         vector<pii>arr;
-        priority_queue<pair<int,int>>p;
+        priority_queue<pii>p;
         for(int i = 0;i<n;i++){
             int ai;
             cin>>ai;

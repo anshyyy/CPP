@@ -10,19 +10,31 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n;
+     int n;
      cin>>n;
-     vector<ll>arr(n),b(n);
-     loop(i,0,n){
-         cin>>arr[i];
-        // b[i]=arr[i];
-     }
+     vector<int>arr(n);
+     loop(i,0,n)cin>>arr[i];
      if(is_sorted(all(arr))){
-         cout<<"NO\n";
+         loop(i,0,n)cout<<arr[i]<<" ";
+         cout<<endl;
+         return;
      }
-     else cout<<"YES\n";
-    
-    
+    //  int i =n-1,j=n-2;
+    //  while(j>=0){
+    //      if(arr[i]<arr[j]){
+    //          swap(arr[i],arr[j]);
+    //          break;
+    //      }
+    //      i--;
+    //      j--;
+    //  }
+    int i =0,j=1;
+    while(j<n){
+        if(arr[i])
+    }
+     loop(i,0,n)
+       cout<<arr[i]<<" ";
+       cout<<endl;
 }
 int main() {
 int t=1;
