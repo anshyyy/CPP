@@ -14,27 +14,25 @@ void solve(){
      cin>>n;
      vector<int>arr(n);
      loop(i,0,n)cin>>arr[i];
-     if(is_sorted(all(arr))){
+     int k = 1,i,j;
+     for(i = 0;i<n;i++){
+         if(arr[i]!=k) break;
+         k++;
+     }
+     if(k==n+1){
          loop(i,0,n)cout<<arr[i]<<" ";
          cout<<endl;
          return;
      }
-    //  int i =n-1,j=n-2;
-    //  while(j>=0){
-    //      if(arr[i]<arr[j]){
-    //          swap(arr[i],arr[j]);
-    //          break;
-    //      }
-    //      i--;
-    //      j--;
-    //  }
-    int i =0,j=1;
-    while(j<n){
-        if(arr[i])
-    }
-     loop(i,0,n)
-       cout<<arr[i]<<" ";
-       cout<<endl;
+     for(j = n-1;j>=0;j--){
+         if(arr[j]==k) break;
+     }
+     cout<<i<<" "<<j<<endl;
+     for(int k = 0;k<i;k++) cout<<arr[k]<<" ";
+     for(int k = j;k>=i;k--) cout<<arr[k]<<" ";
+     for(int k = j+1;k<n;k++)cout<<arr[k]<<" ";
+     cout<<endl;
+
 }
 int main() {
 int t=1;

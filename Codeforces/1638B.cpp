@@ -12,19 +12,22 @@ using namespace std;
 void solve(){ 
      ll n;
      cin>>n;
-     vector<ll>a(n);
-     loop(i,0,n)cin>>a[i];
-    while (1) {
-      int c = 0;
-      for (int i = 0; i < n - 1; i++) {
-         if (a[i] > a[i + 1] && (a[i] + a[i + 1]) % 2 == 1) {swap(a[i], a[i + 1]); c++;}
-      }
-      if (c == 0)break;
-   }
-    //  loop(i,0,n)cout<<arr[i]<<" ";
-    //  cout<<endl;
-     if(is_sorted(all(a)))cout<<"Yes\n";
-     else cout<<"No\n";
+     vector<ll>arr(n);
+     vector<ll>even,odd;
+     loop(i,0,n){
+          cin>>arr[i];
+          if(arr[i]%2)even.push_back(arr[i]);
+          else odd.push_back(arr[i]);
+     }
+     vector<ll>even1 =even;
+     vector<ll>odd1 =odd;
+     sort(all(even1));
+     sort(all(odd1));
+     if((even1==even)&&(odd1==odd)){
+          cout<<"YES\n";
+     }
+     else cout<<"NO\n";
+     
 
 }
 int main() {

@@ -32,20 +32,21 @@ void solve()
     vector<int> visited(n + 1);
     int x = 1, y = 2;
     loop(i, 1, n + 1) visited[i] = reqWins;
+    if(n&1){
     for (auto ai : match)
     {
         int ff = ai.first;
         int ss = ai.second;
 
-        if (ff == x && ss == y && ties > 0)
-        {
-            cout << "0 ";
-           // cout << x << " " << y << endl;
-            ties--;
-            x += 2;
-            y += 2;
-        }
-        else if (visited[ff] > 0)
+        // if (ff == x && ss == y && ties > 0)
+        // {
+        //     cout << "0 ";
+        //    // cout << x << " " << y << endl;
+        //     ties--;
+        //     x += 2;
+        //     y += 2;
+        // }
+        if (visited[ff] > 0)
         {
             cout << "1 ";
             visited[ff]--;
@@ -57,6 +58,34 @@ void solve()
         }
     }
     cout << endl;
+    }
+    else{
+        for(int i =0;i<n;i++){
+         int j;
+         int prev;
+         if(!(i&1)){
+             cout<<"0 ";
+             j=i+2;
+             prev=-1;
+         }
+         else{
+             j=i+1;
+             prev =1;
+         }
+         while(j<n){
+             if(prev==1){
+                 cout<<"-1 ";
+                 prev =-1;
+             }
+             else{
+                 cout<<"1 ";
+                 prev=1;
+             }
+             j++;
+         }
+     }
+    }
+    cout<<endl;
 }
 int main()
 {
