@@ -10,28 +10,11 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n;
-     cin>>n;
-     string s;
-     cin>>s;
-     deque<int>dq;
-     dq.push_back(0);
-     auto now = dq.begin();
-     int id = 1;
-     for(auto &i :s){
-          if(i=='L'){
-               now = dq.insert(now,id);
-          } else {
-               ++now;
-               now = dq.insert(now,id);
-          }
-          id++;
-     }
-     for(auto &i : dq){
-          cout<<i<<" ";
-     }
-
-     
+     int a,b;
+     cin>>a>>b;
+     if(b-a==1) cout<<"Yes\n";
+     else if(a==1 && b!=1) cout<<"Yes\n";
+     else cout<<"No\n";
 }
 int main() {
 int t=1;

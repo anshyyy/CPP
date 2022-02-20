@@ -12,26 +12,13 @@ using namespace std;
 void solve(){ 
      ll n;
      cin>>n;
-     string s;
-     cin>>s;
-     deque<int>dq;
-     dq.push_back(0);
-     auto now = dq.begin();
-     int id = 1;
-     for(auto &i :s){
-          if(i=='L'){
-               now = dq.insert(now,id);
-          } else {
-               ++now;
-               now = dq.insert(now,id);
-          }
-          id++;
+     set<ll>s;
+     loop(i,0,n){
+         ll x;
+         cin>>x;
+         s.insert(x);
      }
-     for(auto &i : dq){
-          cout<<i<<" ";
-     }
-
-     
+     cout<<s.size()<<endl;
 }
 int main() {
 int t=1;

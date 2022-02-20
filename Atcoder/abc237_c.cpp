@@ -26,30 +26,36 @@ void solve(){
          cout<<"Yes\n";
          return;
      }
-     ll a = 0;
-     for (ll i = ((ll)s.size())-1; i >=0; i--)
-     {
-         if(s[i]=='a'){
-             a++;
+     int l = 0,r=s.size()-1;
+     bool flag=true;
+     int idl=0,idr=0;
+     while(l<s.size()&&s[l]=='a'){
+         l++;
+         idl++;
+     }
+     while(r>=0&&s[r]=='a'){
+         r--;
+         idr++;
+     }
+     if(idl>idr){
+         cout<<"No\n";
+         return;
+     }
+     while(l<r){
+         if(s[l]==s[r]){
+             l++;
+             r--;
+         } else{
+             flag = false;
+             break;
          }
-         else break;
      }
-     string res = "";
-     while(a--){
-         res += 'a';
-     }
-      ll i = 0;
-      while(i<ll(s.size())){
-          res+=s[i++];
-      }
-      if(isPalindrome(res)){
-          cout<<"Yes\n";
-      }
-      else cout<<"No\n";
+     cout<<(flag ? "Yes\n":"No\n");
+     
 }
 int main() {
 int t=1;
-cin>>t;
+
 while(t--){
  solve(); 
 }
