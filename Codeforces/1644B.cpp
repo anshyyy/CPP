@@ -9,23 +9,30 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
+bool check(vector<int>&arr){
+    int n = arr.size();
+    for(int i = 2;i<n;i++){
+       if(arr[i-2]+arr[i-1]==arr[i])
+          return false;
+    }
+    return true;
+}
+void printArr(vector<int>&arr){
+    for(int i = 0;i<arr.size();i++)
+      cout<<arr[i]<<" ";
+    cout<<endl;
+}
 void solve(){ 
-     ll n,k;
-     cin>>n>>k;
-     if(n%3==0){
-         loop(i,0,3)cout<<n/3<<" ";
-         cout<<endl;
-     }
-     else if(n%2){
-         cout<<1<<" "<<n/2<<" "<<n/2<<endl;
-     }
-     else{
-        //  cout<<2<<" "<<(n-2)/2<<" "<<(n-2)/2<<endl;
-        if(n%4==0)
-           cout<<n/2<<" "<<n/4<<" "<<n/4<<endl;
-        else  
-           cout<<n/2-1<<" "<<n/2-1<<" "<<2<<endl;
-     }
+     int n;
+     cin>>n;
+     vector<int>arr(n);
+     int w = n;
+     loop(i,0,n) arr[n-i-1]=i+1;
+     for(int i = 0;i<n;i++){
+        printArr(arr);
+        swap(arr[0],arr[i+1]);
+    }
+    
 }
 int main() {
 int t=1;

@@ -10,22 +10,26 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n,k;
-     cin>>n>>k;
-     if(n%3==0){
-         loop(i,0,3)cout<<n/3<<" ";
-         cout<<endl;
+     string s;
+     cin>>s;
+     map<char,int>m;
+     for(int i =0;i<6;i++){
+        m[s[i]]=i+1;
      }
-     else if(n%2){
-         cout<<1<<" "<<n/2<<" "<<n/2<<endl;
+     bool flag = true;
+     for(auto x : m){
+         char ss = x.first;
+         int id = x.second;
+         for(auto y :m){
+             if(ss+32==y.first){
+                 if(id<y.second){
+                     flag = false;
+                     break;
+                 }
+             }
+         }
      }
-     else{
-        //  cout<<2<<" "<<(n-2)/2<<" "<<(n-2)/2<<endl;
-        if(n%4==0)
-           cout<<n/2<<" "<<n/4<<" "<<n/4<<endl;
-        else  
-           cout<<n/2-1<<" "<<n/2-1<<" "<<2<<endl;
-     }
+     flag?cout<<"YES\n":cout<<"NO\n";
 }
 int main() {
 int t=1;
