@@ -10,25 +10,31 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     int n;
-     cin>>n;
-     vector<bool>s(n+1,0),e(n+1,0);
-     int total = 0, res =0;
-     for(int i = 0;i<n;i++){
-         int a,b,c;
-         cin>>a>>b>>c;
-         total += c;
-         if(s[a]||e[b]){
-             res+=c;
-             s[b]=true;
-             e[a]=true;
+     string s;
+     cin>>s;
+     int a =0,b=0,ad=0,bd=0;
+     bool flag=false;
+     for (int i = 0; i <10; i++)
+     {
+         if(s[i]=='1'){
+             if(i%2)b++;
+             else a++;
          }
-         else{
-             s[a]=true;
-             e[b]=true;
+         else if(s[i]=='?'){
+             if(i%2) bd++;
+             else ad++;
+         }
+         if(a+ad>b+(10-i)/2){
+             cout<<i+1<<endl;
+             return;
+         }
+         if(b+bd>a+(9-i)/2){
+             cout<<i+1<<endl;
+             return;
          }
      }
-     cout<<min(res,total-res)<<endl;
+     if(!flag)cout<<"10\n";
+     
 }
 int main() {
 int t=1;

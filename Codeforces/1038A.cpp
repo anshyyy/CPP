@@ -10,25 +10,22 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     int n;
-     cin>>n;
-     vector<bool>s(n+1,0),e(n+1,0);
-     int total = 0, res =0;
-     for(int i = 0;i<n;i++){
-         int a,b,c;
-         cin>>a>>b>>c;
-         total += c;
-         if(s[a]||e[b]){
-             res+=c;
-             s[b]=true;
-             e[a]=true;
-         }
-         else{
-             s[a]=true;
-             e[b]=true;
-         }
+     int n,k;
+     cin>>n>>k;
+     string s;
+     cin>>s;
+     unordered_map<char,int>m;
+     loop(i,0,k){
+         m[65+i]=0;
      }
-     cout<<min(res,total-res)<<endl;
+    // for(auto x : m)cout<<x.first<<" "<<x.second<<endl;
+     loop(i,0,n) m[s[i]]++;
+    // for(auto x : m)cout<<x.first<<" "<<x.second<<endl;
+     int mini = INT_MAX;
+     for(auto x : m){
+        mini = min(mini,x.second);
+     }
+     mini*k > n ? cout<<"0\n" : cout<<mini*k<<endl;
 }
 int main() {
 int t=1;
