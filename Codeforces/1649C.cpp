@@ -18,7 +18,7 @@ bool my(const pair<ll,ll> &x, const pair<ll,ll> &y){
 void solve(){
     ll a, b; 
     cin>>a>>b;
-    map<int,vector<pair<int,int>>> m;
+    map<ll,vector<pair<ll,ll>>> m;
     for(int i =0;i<a;i++){
         for(int j = 0;j<b;j++){
             ll ai; cin>>ai;
