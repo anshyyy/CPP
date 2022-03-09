@@ -25,7 +25,7 @@ void solve(){
      {
          int x,w;
          cin>>x>>w;
-         arr.push_back(x,w,i);
+         arr.emplace_back(x,w,i);
      }
      sort(all(arr),[](auto &x,auto &y){return x.w<y.w;});
      ll w = 0;
