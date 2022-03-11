@@ -10,7 +10,7 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 int N,M;
-int vis[1001][10001];
+int vis[1001][1001];
 char arr [1001][1001];
 int dx[] = {-1,0,1,0};
 int dy[] = {0,1,0,-1}; 
@@ -68,7 +68,6 @@ void solve(){
 }
 int main() {
 int t=1;
-
 while(t--){
  solve(); 
 }
