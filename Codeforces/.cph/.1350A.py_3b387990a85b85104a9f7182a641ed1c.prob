@@ -1,0 +1,1 @@
+{"name":"Local: 1350A","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1350A.py","tests":[{"id":1647574526410,"input":"3\n21 5\n5 1\n8 2\n3 4\n","output":""},{"id":1647574742740,"input":"2\n15 336015707\n25 337693933","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1350A.py","group":"local","local":true}
