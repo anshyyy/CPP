@@ -10,16 +10,20 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-      string s;
-      cin>>s;
-      int n = s.size();
-      if(s[0]==')'||s[n-1]=='('||n%2){
-           cout<<"NO\n";
-           return;
-      }
-      cout<<"YES\n";
-
-
+     string s1,s2;
+     cin>>s1>>s2;
+     int h = 0;
+     for (int i = 0; i < s1.size(); i++)
+     {
+         for (int j = s1.size()-1; j >= i; j--)
+         {
+              if(s2.find(s1.substr(i,j-i+1))!=string::npos){
+                h = max(h,j-i+1);
+              }
+         }
+     }
+     cout<<s1.size()+s2.size()-2*h<<endl;
+     
 }
 int main() {
 int t=1;
@@ -27,5 +31,5 @@ cin>>t;
 while(t--){
  solve(); 
 }
-      return 0;
+     return 0;
 }
