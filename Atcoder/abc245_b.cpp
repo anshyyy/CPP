@@ -10,33 +10,29 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll v,a,b,c;
-     cin>>v>>a>>b>>c;
-     bool f=true,m=true,t=true;
-     while(true){
-        v= v-a;
-        if(v<0){
-            f = false;
-            break;
-        }
-        v=v-b;
-        if(v<0){
-            m = false;
-            break;
-        }
-        v=v-c;
-        if(v<0){
-            t = false;
-            break;
-        }
+     ll n;
+     cin>>n;
+     vector<int>arr(n);
+     map<ll,ll>mp;
+     loop(i,0,n){
+         cin>>arr[i];
+         mp[arr[i]]++;
      }
-     if(!f)cout<<"F\n";
-     if(!m) cout<<"M\n";
-     if(!t)cout<<"T\n";
+     ll ans = 0;
+     for (int i = 0; i <n; i++)
+     {
+         if(mp.find(ans)!=mp.end()){
+             ans++;
+         }
+         else break;
+     }
+     cout<<ans<<endl;
+     
+     
 }
 int main() {
 int t=1;
-// cin>>t;
+
 while(t--){
  solve(); 
 }

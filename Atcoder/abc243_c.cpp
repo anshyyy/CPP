@@ -44,7 +44,7 @@ void solve(){
             break;
         }
      }
-     if(cann) cout<<"yes\n";
+     if(cann) cout<<"Yes\n";
      else cout<<"No\n";
 }
 int main() {

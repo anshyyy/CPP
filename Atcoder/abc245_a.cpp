@@ -10,33 +10,28 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll v,a,b,c;
-     cin>>v>>a>>b>>c;
-     bool f=true,m=true,t=true;
-     while(true){
-        v= v-a;
-        if(v<0){
-            f = false;
-            break;
-        }
-        v=v-b;
-        if(v<0){
-            m = false;
-            break;
-        }
-        v=v-c;
-        if(v<0){
-            t = false;
-            break;
-        }
+     int a,b,c,d;
+     cin>>a>>b>>c>>d;
+     if (a < c){
+         cout<<"Takahashi\n";
+         return;
      }
-     if(!f)cout<<"F\n";
-     if(!m) cout<<"M\n";
-     if(!t)cout<<"T\n";
+     if (a>c){
+         cout<<"Aoki\n";
+         return;
+     }
+     if(a==c){
+         if(b<=d){
+             cout<<"Takahashi\n";
+         }
+         else{
+             cout<<"Aoki\n";
+         }
+     }
 }
 int main() {
 int t=1;
-// cin>>t;
+cin>>t;
 while(t--){
  solve(); 
 }
