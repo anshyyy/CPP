@@ -9,15 +9,25 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
+ll factt(ll n){
+    ll fact=1;
+    for (ll i = 1; i <=n; i++)
+    {
+         fact = (fact*i)%MOD;
+    }
+    return fact;
+    
+}
 void solve(){ 
-      string s;
-      cin>>s;
-      int n = s.size();
-      if(s[0]==')'||s[n-1]=='('||n%2){
-           cout<<"NO\n";
-           return;
-      }
-      cout<<"YES\n";
+     ll n;
+     cin>>n;
+     ll ans = 0;
+     if(n%2){
+         cout<<"0\n";
+         return;
+     }
+     ans = (factt(n/2)*factt(n/2))%MOD;
+     cout<<ans<<endl; 
 }
 int main() {
 int t=1;
@@ -25,5 +35,5 @@ cin>>t;
 while(t--){
  solve(); 
 }
-      return 0;
+     return 0;
 }
