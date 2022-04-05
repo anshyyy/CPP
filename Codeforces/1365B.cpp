@@ -10,17 +10,22 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll a,b;
-     cin>>a>>b;
-     string s(a,'a');
-     ll p = 2;
-     while(b>p-1){
-         b=b-(p-1);
-         p++;
-     }
-     s[a-p]='b';
-     s[a-b]='b';
-     cout<<s<<endl;
+     int n;
+     cin>>n;
+     vector<int>arr(n),b(n);
+     bool sorted = true;
+     bool zero =0,one=0;
+     loop(i,0,n){
+         cin>>arr[i];
+         if(i>=1&&arr[i]<arr[i-1]) sorted = false;
+         }
+    loop(i,0,n){
+        cin>>b[i];
+        if(!b[i]) zero=true;
+        else one=true;
+    }
+    if((one&&zero)||sorted)cout<<"Yes\n";
+    else cout<<"No\n";
 }
 int main() {
 int t=1;

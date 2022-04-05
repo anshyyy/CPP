@@ -10,17 +10,24 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll a,b;
-     cin>>a>>b;
-     string s(a,'a');
-     ll p = 2;
-     while(b>p-1){
-         b=b-(p-1);
-         p++;
+     ll n;
+     cin>>n;
+     vector<ll>a(n),b(n-1),c(n-2);
+     ll s1=0,s2=0,s3=0;
+     loop(i,0,n){
+         cin>>a[i];
+         s1+=a[i];
      }
-     s[a-p]='b';
-     s[a-b]='b';
-     cout<<s<<endl;
+     loop(i,0,n-1){
+         cin>>b[i];
+         s2+=b[i];
+     }
+     loop(i,0,n-2){
+         cin>>c[i];
+         s3+=c[i];
+     }
+     cout<<s1-s2<<endl<<s2-s3;
+     cout<<endl;
 }
 int main() {
 int t=1;

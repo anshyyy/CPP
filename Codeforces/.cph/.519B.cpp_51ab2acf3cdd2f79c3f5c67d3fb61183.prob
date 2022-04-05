@@ -1,0 +1,1 @@
+{"name":"Local: 519B","url":"d:\\C++\\CPP\\CPP\\Codeforces\\519B.cpp","tests":[{"id":1649155017724,"input":"2\n5\n1 5 8 123 7\n123 7 5 1\n5 1 7\n\n6\n1 4 3 3 5 7\n3 7 5 4 3\n4 3 7 5\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\519B.cpp","group":"local","local":true}
