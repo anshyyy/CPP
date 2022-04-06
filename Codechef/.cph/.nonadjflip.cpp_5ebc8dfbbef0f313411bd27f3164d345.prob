@@ -1,0 +1,1 @@
+{"name":"Local: nonadjflip","url":"d:\\C++\\CPP\\CPP\\Codechef\\nonadjflip.cpp","tests":[{"id":1649259143705,"input":"3\n6\n101001\n5\n00000\n3\n111\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codechef\\nonadjflip.cpp","group":"local","local":true}

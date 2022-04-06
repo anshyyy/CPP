@@ -1,0 +1,1 @@
+{"name":"Local: brknlife","url":"d:\\C++\\CPP\\CPP\\Codechef\\brknlife.cpp","tests":[{"id":1649264743819,"input":"2\n4 2\n?ab?\nba\n4 2\na??b\nab\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codechef\\brknlife.cpp","group":"local","local":true}
