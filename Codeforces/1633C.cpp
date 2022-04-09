@@ -13,11 +13,11 @@ void solve(){
      ll hc,dc,hm,dm,a,w,k;
      cin>>hc>>dc>>hm>>dm>>k>>w>>a;
      bool ff = false;
-    for (int i = 0; i <= k; i++) {
-      int H = hc + i * a;
-      int D = dc + (k - i) * w;
-      int x = (hm + D - 1) / D;
-      int y = (H + dm - 1) / dm;
+     for (int i = 0; i <= k; i++) {
+      ll H = hc + i * a;
+      ll D = dc + (k - i) * w;
+      ll x = (hm + D - 1) / D;
+      ll y = (H + dm - 1) / dm;
       if (x <= y) {
          ff = true;
          break;

@@ -9,34 +9,24 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
-ll setBits(ll n)
-{
-    // Store the number of setbits
-    int count = 0;
- 
-    while (n > 0) {
- 
-        // Update the value of n
-        n = n & (n - 1);
- 
-        count++;
-    }
- 
-    // Return the total count
-    return count;
-}
-void findNthTerm(ll N)
-{
-    // Store the result
-    ll x = setBits(N ^ (N - 1));
- 
-    // Print the result
-    cout << x<<endl;
-}
 void solve(){ 
      ll n,k;
      cin>>n>>k;
-     findNthTerm(k);
+     vector<ll>arr(n);
+     loop(i,0,n)cin>>arr[i];
+     ll pos;
+     while(k--){
+         pos = -1;
+         for(int i = 0;i<n-1;i++){
+             if(arr[i]<arr[i+1]){
+                 pos = i+1;
+                 arr[i]++;
+                 break;
+             }
+         }
+         if(pos==-1)break;
+     }
+     cout<<pos<<endl;
 }
 int main() {
 int t=1;
