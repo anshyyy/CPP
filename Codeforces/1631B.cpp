@@ -10,18 +10,25 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     int n,k;cin>>n>>k;
-     string s;cin>>s;
-     int l = s.find('*');
-     int r = s.find_last_of('*');
-     int ans = 1;
-     for(int i = l;i<r;i+=k){
-         while(s[i]=='.'){
-             i--;
-         }
-          ans++;
+     ll n,cnt=0;
+     cin>>n;
+     vector<ll>arr(n);
+     loop(i,0,n)cin>>arr[i];
+     if(all_of(all(arr),[&](int i){return i==arr[n-1];})){
+         cout<<"0\n";
+         return;
      }
-     cout<<ans<<endl;
+     ll i = n-1;
+    while(i >=0)
+     {
+         while(i>=0&&arr[i]==arr[n-1]) i--;
+        if(i==-1)break;
+        ll len =n-1-i;
+        i = i - len;
+        cnt++;
+     }
+     cout<<cnt<<endl;
+     
 }
 int main() {
 int t=1;
