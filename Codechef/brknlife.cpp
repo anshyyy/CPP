@@ -9,15 +9,14 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
-bool isSubSequence(string str1, string str2, int m, int n)
-{
-    int j = 0; 
-    for (int i = 0; i < n && j < m; i++)
-        if (str1[j] == str2[i])
-            j++;
- 
-    return (j == m);
-}
+bool isSubsequence(string s, string t) {
+       int idx=0;
+        for(int i=0 ; i<t.size() ; i++){
+            if(t[i] == s[idx]) idx++;
+        }
+        if(idx == s.size()) return true;
+        else return false; 
+    }
 void solve(){ 
     ll n,m;
     cin>>n>>m; 
@@ -32,7 +31,7 @@ void solve(){
         s1[j]=s[j]; 
       } 
     } 
-    if(!isSubSequence(t,s,m,n)){ 
+    if(!isSubsequence(t,s1)){ 
       cout<<s1<<endl; 
       return; 
     } 
