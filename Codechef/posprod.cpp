@@ -10,25 +10,23 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n;
-     cin>>n;
-     ll sum = 0;
+     ll n;cin>>n;
      vector<ll>arr(n);
+     ll posi = 0,negi = 0;
      loop(i,0,n){
          cin>>arr[i];
-         sum+=arr[i];
+         if(arr[i]>0)posi++;
+         else if (arr[i]<0) negi++;
      }
-     ll i = 0;
-     while(true){
-          i++;
-          sum-=i;
-          if((sum-i)<=0) break;
-         // cout<<sum<<" "<<i<<endl;
+     if(n==posi||n==negi){
+         cout<<(n*(n-1))/2<<endl;
+         return;
      }
-     cout<<i<<endl;
+     ll ans = (negi*(negi-1))/2 + (posi*(posi-1))/2;
+     cout<<ans<<endl;
+
 }
 int main() {
-IOS;
 int t=1;
 cin>>t;
 while(t--){

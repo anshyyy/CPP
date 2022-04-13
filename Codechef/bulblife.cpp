@@ -10,25 +10,16 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n;
-     cin>>n;
-     ll sum = 0;
-     vector<ll>arr(n);
-     loop(i,0,n){
-         cin>>arr[i];
-         sum+=arr[i];
-     }
-     ll i = 0;
-     while(true){
-          i++;
-          sum-=i;
-          if((sum-i)<=0) break;
-         // cout<<sum<<" "<<i<<endl;
-     }
-     cout<<i<<endl;
+     int n,x;cin>>n>>x;
+     vector<int>arr(n-1);
+     loop(i,0,n-1)cin>>arr[i];
+     ll sum = accumulate(all(arr),0LL);
+     ll ans = x*n - sum;
+    // cout<<sum<<" "<<ans<<endl;
+     if(ans<=0)cout<<"0\n";
+     else cout<<ans<<endl;
 }
 int main() {
-IOS;
 int t=1;
 cin>>t;
 while(t--){
