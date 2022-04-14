@@ -14,28 +14,29 @@ const ll MOD = 998244353;
 using namespace std;
 void solve()
 {
-    ll n, cnt = 0;
+    //we have to find maximum lexicographic permutation
+    int n;
     cin >> n;
-    vector<ll> arr(n);
-    loop(i, 0, n) cin >> arr[i];
-    if (all_of(all(arr), [&](int i)
-               { return i == arr[n - 1]; }))
+    unordered_map<int, int> mp;
+    vector<int> arr(n);
+    loop(i, 0, n)
     {
-        cout << "0\n";
-        return;
+        cin >> arr[i];
+        mp[arr[i]] = i;
     }
-    ll i = n - 1;
-    while (i >= 0)
+    int r = n;
+    for (int i = n; i > 0; i--)
     {
-        while (i >= 0 && arr[i] == arr[n - 1])
-            i--;
-        if (i == -1)
-            break;
-        ll len = n - 1 - i; 
-        i = i - len;
-        cnt++;
+        if (mp[i] >= r)
+            continue;
+         cout<<mp[i]<<" : ";
+        for (int x = mp[i]; x < r; x++)
+        {
+            cout << arr[x] << " ";
+        }
+        r = mp[i];
     }
-    cout << cnt << endl;
+    cout << endl;
 }
 int main()
 {
