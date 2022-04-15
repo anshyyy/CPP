@@ -29,7 +29,7 @@ void solve()
     {
         if (mp[i] >= r)
             continue;
-         cout<<mp[i]<<" : ";
+        //  cout<<mp[i]<<" : ";
         for (int x = mp[i]; x < r; x++)
         {
             cout << arr[x] << " ";

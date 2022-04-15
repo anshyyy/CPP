@@ -5,7 +5,6 @@ t = int(input())
 for _ in range(t):
     n ,d = map(int,input().split())
     arr = [int(x) for x in input().split()]
-   
     for i in arr:
         flag = False
         if i >= 10*d:
