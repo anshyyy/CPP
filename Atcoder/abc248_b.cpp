@@ -5,33 +5,26 @@
 #define all1(v) (v).begin()+1,(v).end()
 #define allr(v) (v).rbegin(),(v).rend()
 #define allr1(v) (v).rbegin()+1,(v).rend()
+#define ff first
+#define ss second
 typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     int a,b,c,d;
-     cin>>a>>b>>c>>d;
-     if (a < c){
-         cout<<"Takahashi\n";
-         return;
+     ll a,b,k;
+     cin>>a>>b>>k;
+     ll ans = 0;
+     
+     while(a<b){
+        a = a*k;
+        ans++;
      }
-     if (a>c){
-         cout<<"Aoki\n";
-         return;
-     }
-     if(a==c){
-         if(b<=d){
-             cout<<"Takahashi\n";
-         }
-         else{
-             cout<<"Aoki\n";
-         }
-     }
+     cout<<ans<<endl;
 }
 int main() {
 int t=1;
-
+cin>>t;
 while(t--){
  solve(); 
 }
