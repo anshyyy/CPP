@@ -1,0 +1,1 @@
+{"name":"Local: SumOfRoundNumbers","url":"d:\\C++\\CPP\\CPP\\Codeforces\\gym\\SumOfRoundNumbers.cpp","tests":[{"id":1650523201316,"input":"5\n5009\n7\n9876\n10000\n10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\gym\\SumOfRoundNumbers.cpp","group":"local","local":true}

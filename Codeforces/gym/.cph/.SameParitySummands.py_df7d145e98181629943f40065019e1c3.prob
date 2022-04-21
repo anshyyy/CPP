@@ -1,0 +1,1 @@
+{"name":"Local: SameParitySummands","url":"d:\\C++\\CPP\\CPP\\Codeforces\\gym\\SameParitySummands.py","tests":[{"id":1650525644445,"input":"8\n10 3\n100 4\n8 7\n97 2\n8 8\n3 10\n5 3\n1000000000 9","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\gym\\SameParitySummands.py","group":"local","local":true}
