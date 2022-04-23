@@ -12,17 +12,19 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n;cin>>n;
-     vector<int>arr(n);
-     loop(i,0,n){
-         cin>>arr[i];
-     }
+     string s;cin>>s;
+     int a=0,b=0;
      bool flag = true;
-     int ans = 0;
-     for(int i = 0;i<n-1;i++){
-            ans+=arr[i+1]-arr[i]-1;
+     int n = s.size();
+     for(auto i : s){
+         if(i=='B') b++;
+         else a++;
+         if(a<b) flag = false;
      }
-     ans<=2 ? cout<<"YES\n":cout<<"NO\n";
+     if(s[n-1]!='B' || s[0]!='A'){
+         flag = false;
+     }
+     cout<<(flag ? "YES\n":"NO\n");
 }
 int main() {
 int t=1;

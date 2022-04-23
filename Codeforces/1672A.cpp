@@ -12,19 +12,25 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n;cin>>n;
-     vector<int>arr(n);
-     loop(i,0,n){
-         cin>>arr[i];
+     int n;cin>>n;
+     vector<int>arr(n),res;
+     loop(i,0,n)cin>>arr[i];
+     int cnt = 0;
+     for(int i = 0;i<n;i++){
+         if(arr[i]>1){
+             while(arr[i]>1){
+                 cnt++;
+                 res.push_back(1);
+                 arr[i]--;
+             }
+         }
+         else res.push_back(arr[i]);
      }
-     bool flag = true;
-     int ans = 0;
-     for(int i = 0;i<n-1;i++){
-            ans+=arr[i+1]-arr[i]-1;
-     }
-     ans<=2 ? cout<<"YES\n":cout<<"NO\n";
+     loop(i,0,res.size())cout<<res[i]<<" ";
+    cout<< (cnt%2 ?"errorgorn\n" : "maomao90\n");
 }
 int main() {
+IOS
 int t=1;
 cin>>t;
 while(t--){

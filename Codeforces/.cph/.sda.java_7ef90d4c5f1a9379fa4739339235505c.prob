@@ -1,0 +1,1 @@
+{"name":"Local: sda","url":"d:\\C++\\CPP\\CPP\\Codeforces\\sda.java","tests":[{"id":1650701570790,"input":"5\n1 2 3 4 5","output":""},{"id":1650701849558,"input":"5\n3 4 5 6 9 ","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\sda.java","group":"local","local":true}
