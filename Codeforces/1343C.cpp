@@ -12,24 +12,36 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     int n;cin>>n;
-     vector<int>arr(n),res;
+     ll n;
+     cin>>n;
+     ll sum = 0;
+     vector<ll>arr(n);
      loop(i,0,n)cin>>arr[i];
-     int cnt = 0;
-     for(int i = 0;i<n;i++){
-         if(arr[i]>1){
-             while(arr[i]>1){
-                 cnt++;
-                 res.push_back(1);
-                 arr[i]--;
+     for (int i = 0; i < n;)
+     {
+         ll maxi;
+         if(arr[i]<0){
+             maxi = arr[i];
+             while(i<n && arr[i]<0){
+                 maxi = max(arr[i],maxi);
+                 i++;
              }
          }
-         else res.push_back(arr[i]);
+         else{
+             maxi = arr[i];
+             while(i<n && arr[i]>0){
+                 maxi = max(arr[i],maxi);
+                 i++;
+             }
+         }
+         //cout<<maxi<<" ";
+         sum+= maxi;
      }
-    cout<< (cnt%2 ?"errorgorn\n" : "maomao90\n");
+     cout<<sum<<endl;
+
+     
 }
 int main() {
-IOS
 int t=1;
 cin>>t;
 while(t--){
