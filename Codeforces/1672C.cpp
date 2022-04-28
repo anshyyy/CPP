@@ -25,8 +25,6 @@ void solve(){
      }
     if(l==r||l==-1)cout<<"0\n";
     else cout<<max(1LL,r-l-1LL)<<endl;
-     
-
 }
 int main() {
 int t=1;
