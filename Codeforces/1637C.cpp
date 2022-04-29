@@ -44,7 +44,7 @@ void solve()
         cout << "-1\n";
         return;
     }
-    int ans = 0;
+    ll ans = 0;
     for (int i = 1; i < n - 1; i++)
     {
         if (arr[i] % 2 == 1)

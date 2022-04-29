@@ -16,7 +16,7 @@ const ll MOD = 998244353;
 using namespace std;
 void solve()
 {
-    int n;
+    int n; // we have to take atleast one zero in the array and that will be optimal (brute force)
     cin >> n;
     vector<int> arr(n + 1);
     loop(i, 1, n + 1) cin >> arr[i];
