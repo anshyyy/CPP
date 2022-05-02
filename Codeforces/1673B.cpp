@@ -11,7 +11,7 @@
 #define ff first
 #define ss second
 typedef long long ll;
-const ll INF = 1e9 + 7;
+const ll INF = 1e9 + 7
 const ll MOD = 998244353;
 using namespace std;
 void solve()

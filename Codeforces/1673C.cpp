@@ -15,7 +15,7 @@ const ll INF = 1e9 + 7;
 const ll MOD = 998244353;
 const ll mx = 40001;
 using namespace std;
-vector<int> dp(40001);
+vector<ll> dp(40001);
 bool isPal(int N)
 {
     string s="";
@@ -37,7 +37,7 @@ void solve()
     cin >> n;
     cout << dp[n] << endl;
 }
-int main()
+int32_t main()
 {
    IOS;
     dp[0] = 1;
@@ -47,7 +47,7 @@ int main()
             continue;
         for (int j = i; j < mx; j++)
         {
-            dp[j] += dp[j - i];
+            (dp[j] += dp[j - i]) %=INF;
         }
     }
     int t = 1;
