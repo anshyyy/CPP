@@ -15,18 +15,12 @@ const ll INF = 1e9 + 7;
 const ll MOD = 998244353;
 using namespace std;
 unordered_map<int, vector<int>> store;
-int findFrequency(vector<int> &arr, int n, int left, int right, int element)
+int Fy(vector<int> &arr, int n, int left, int right, int element)
 {
 
-    int a = lower_bound(store[element].begin(),
-                        store[element].end(),
-                        left) -
-            store[element].begin();
+    int a = lower_bound(store[element].begin(), store[element].end(),left)-store[element].begin();
 
-    int b = upper_bound(store[element].begin(),
-                        store[element].end(),
-                        right) -
-            store[element].begin();
+    int b = upper_bound(store[element].begin(),store[element].end(),right)-store[element].begin();
 
     return b - a;
 }
@@ -44,7 +38,7 @@ void solve()
     {
         int l, r, x;
         cin >> l >> r >> x;
-        cout <<findFrequency(arr, n, l, r, x) <<endl;
+        cout <<Fy(arr, n, l, r, x) <<endl;
     }
 }
 int32_t main()
