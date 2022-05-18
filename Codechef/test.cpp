@@ -1,48 +1,55 @@
-#include <bits/stdc++.h> 
-using namespace std; 
-#define vi vector<int> 
-#define int long long int 
-#define fr(i, z, n) for (int i = z; i < n; i++) 
-#define rep(i, n, z) for (int i = n - 1; i >= z; i--) 
-void solve() 
-{ 
-  int n,x; 
-  cin>>n>>x; 
-  vi v(n); 
-  if(n%2!=0) 
-  { 
-    int mid=n/2; 
-    v[mid]=x; 
-    fr(i,1,(n/2)+1) 
-    { 
-      v[mid+i]=x+i; 
-      v[mid-i]=x-i; 
-    } 
-  } 
-  else 
-  { 
-    int mid=n/2; 
-    v[mid]=x+1; 
-    v[mid-1]=x-1; 
-    rep(i,mid-1,0) 
-    { 
-      v[i]=v[i+1]-1; 
-    } 
-    fr(i,mid+1,n) 
-    v[i]=v[i-1]+1; 
-  } 
-  fr(i,0,n) 
-  cout<<v[i]<<" "; 
-  cout<<endl; 
-} 
-signed main() 
-{ 
-  // solve(); 
-  int t; 
-  cin >> t; 
-  while (t--) 
-  { 
-    solve(); 
-  } 
-  return 0; 
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+
+int main(){
+    ll t,n;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+
+        n = s.length();
+
+        stack<pair<char,ll>> st;
+
+        for(int i=0;i<n;i++){
+            if(s[i] == '('){
+                st.push({s[i],i});
+            }
+            else{
+                if(st.top().first=='(' && !st.empty()) st.pop();
+                else st.push({s[i],i});
+            }
+        }
+
+        ll ans = st.size();
+
+        vector<ll> vec;
+
+        while(!st.empty()){
+            vec.push_back(st.top().second);
+            st.pop();
+        }
+
+        vec.push_back(0);
+        vec.push_back(n-1);
+
+        if(ans == 0){
+            cout<<0<<" "<<1<<endl;
+            continue;
+        }
+
+        ll res = 0;
+
+        sort(vec.begin(),vec.end());
+
+        for(int i=1;i<vec.size();i++){
+            if(vec[i] - vec[i-1] > 1) res++;
+        }
+
+        cout<<ans<<" "<<res<<endl;
+    }
+return 0;
 }
