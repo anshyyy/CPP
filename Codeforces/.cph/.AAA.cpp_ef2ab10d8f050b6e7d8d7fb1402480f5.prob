@@ -1,0 +1,1 @@
+{"name":"Local: AAA","url":"d:\\C++\\CPP\\CPP\\Codeforces\\AAA.cpp","tests":[{"id":1653218304435,"input":"2\n7\n1234567\n10\n1111234567\n","output":""},{"id":1653218368853,"input":"3\n1\nA\n2\n1*\n7\n1234aB&","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\AAA.cpp","group":"local","local":true}

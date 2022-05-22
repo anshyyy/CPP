@@ -12,35 +12,23 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n,q;
-     cin>>n>>q;
-     vector<ll>arr(n);
-     map<ll,ll>mp;
-     ll l = 0;
-     ll sum = 0;
+     int n;cin>>n;
+     vector<int>arr(n);
+     vector<int>x(n);
      loop(i,0,n){
          cin>>arr[i];
-         mp[i]=arr[i];
-         sum+=arr[i];
+         x[i]=arr[i];
      }
-     while(q--){
-         ll t,id,x;cin>>t;
-         if(t==1){
-             cin>>id>>x;
-             if(mp[id-1]==0) sum -=l;
-             else sum -= mp[id-1];
-             sum+=x;
-             mp[id-1]=x;
-         }
-         else{
-            cin>>x;
-            mp.clear();
-            sum = x*n;
-            l = x;
-         }
-        // for(auto i : mp)cout<<i.ff<<" "<<i.ss<<endl;
-         cout<<sum<<endl;
+     sort(all(x));
+     int ans = -1;
+     for (int i = 0; i < n; i++)
+     {
+        if(arr[i]!=x[i]){
+            ans = ans & arr[i];
+        }
      }
+     cout<<ans<<endl;
+     
 }
 int main() {
 IOS;
