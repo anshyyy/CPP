@@ -12,22 +12,28 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     int n;
-     cin>>n;
-     vector<int>dp(n+1,0);
-     dp[0]=1;// base case
-     for(int i = 1;i<=n;i++){
-         for (int j = 1; j <=6; j++)
+     ll n,x;
+     cin>>n>>x;
+     vector<ll>wt(n),val(n);
+     loop(i,0,n)cin>>wt[i];
+     loop(i,0,n)cin>>val[i];
+     vector<ll>dp(x+1);
+     for(ll i =0;i<=x;i++)dp[i]=0;
+     for (ll i = 1; i < n+1; i++)
+     {
+         for (ll j = x; j >=0; j--)
          {
-             if(j>i) continue; // checking that the call is not more than the sum itself
-             (dp[i]+=dp[i-j])%=INF;
-         }  
+             if(wt[i-1]<=j){
+                 dp[j]= max(val[i-1]+dp[j-wt[i-1]],dp[j]);
+             }
+         }
      }
-    cout<<dp[n];
+     cout<<dp[x]<<endl;
 }
-int main() {
+int32_t main() {
+IOS;
 int t=1;
-
+// cin>>t;
 while(t--){
  solve(); 
 }
