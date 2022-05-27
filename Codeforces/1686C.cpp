@@ -28,8 +28,9 @@ void solve(){
          x+=2;
          y+=2;
      }
-     if(n%2)ans[n-1]=arr[n-1];
-    
+     if(n%2)ans[n-1]=arr[n-1]; // if n odd 
+     loop(i,0,n)cout<<ans[i]<<" ";
+     cout<<endl;
      for (int i = 1; i < n-1; i++)
      {
          if((ans[i]>ans[i+1] && ans[i]>ans[i-1])
@@ -43,11 +44,7 @@ void solve(){
      }
      cout<<"YES\n";
       loop(i,0,n)cout<<ans[i]<<" ";
-      cout<<endl;
-       
-     
-
-     
+      cout<<endl; 
 }
 int main() {
 IOS;

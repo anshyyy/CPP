@@ -40,6 +40,7 @@ void solve(){
               t2.push_back(x.ff);
          }
      }
+     mp.clear();
      unordered_map<int,int>s1,s2;
      for (int i = 0; i < t1.size(); i++)
      {

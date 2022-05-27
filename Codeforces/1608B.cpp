@@ -12,20 +12,20 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     string s1,s2;
-     cin>>s1>>s2;
-     for (int i = 0; i < s1.size(); i++)
-     {
-       string ans1 = s1.substr(0,i+1);
-        string ans2 = s1.substr(0,i);
-         reverse(all(ans2));
-         ans1+=ans2;
-         if(ans1.find(s2)!=-1){
-             cout<<"YES\n";
-             return;
-         }
+     int n,a,b;
+     cin>>n>>a>>b;
+     int l =1,r=n,t=a>b;
+     if(abs(a-b)>1 || a+b+2 >n){
+         cout<<"-1\n";
+         return;
      }
-     cout<<"NO\n";
+     for (int i = 1; i < n+1; i++)
+     {
+         if(t)cout<<l++<<" ";
+         else cout<<r--<<" ";
+         if(a+b>=i) t^=1;
+     }
+    cout<<endl;
      
 }
 int main() {
