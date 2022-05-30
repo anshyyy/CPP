@@ -32,8 +32,6 @@ void solve(){
           mini = min(x.second,mini);
      }
      cout<<mini+1<<endl;
-     
-
 }
 int main() {
 int t=1;

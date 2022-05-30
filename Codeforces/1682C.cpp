@@ -11,48 +11,38 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
+ll lis(vector<ll>&arr){
+    int n = arr.size();
+    vector<ll>temp;
+    temp.push_back(arr[0]);
+    for (int i = 1; i <n; i++)
+    {
+        if(arr[i]>temp.back()){
+            temp.push_back(arr[i]);
+        }
+        else{
+            int id = lower_bound(all(temp),arr[i])-temp.begin();
+            temp[id]=arr[i];
+        }
+    }
+    return temp.size();
+}
 void solve(){ 
      ll n;cin>>n;
-     vector<ll>arr(n),t1,t2;
-     loop(i,0,n)cin>>arr[i];
-     sort(all(arr));
+     vector<ll>arr(n);
+    
      map<ll,ll>mp;
-     loop(i,0,n/2)mp[arr[i]]++;
-     for(auto x : mp){
-         if(x.ss==1){
-             t1.push_back(x.ff);
-         }
-         else{
-              t1.push_back(x.ff);
-              t2.push_back(x.ss);
-         }
-     }
-     mp.clear();
-     loop(i,n/2,n){
-         mp[arr[i]]++;
-     }
-     for(auto x : mp){
-         if(x.ss==1){
-             t2.push_back(x.ff);
-         }
-         else{
-              t1.push_back(x.ff);
-              t2.push_back(x.ff);
-         }
-     }
-     mp.clear();
-     unordered_map<int,int>s1,s2;
-     for (int i = 0; i < t1.size(); i++)
-     {
-         s1[t1[i]]=1;
-     }
-     for (size_t i = 0; i < t2.size(); i++)
-     {
-        s2[t2[i]]=1;
-     }
-     cout<<min(s1.size(),s2.size())<<endl;
-     
-     
+      loop(i,0,n){
+          cin>>arr[i];
+          mp[arr[i]]++;
+      }
+      ll a=0,b=0;
+      for (auto x : mp)
+      {
+          x.ss==1?a++:b++;
+      }
+      cout<< b + (a+1)/2<<endl;;
+      
 
 }
 int main() {
