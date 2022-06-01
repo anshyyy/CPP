@@ -25,7 +25,6 @@ void solve(){
      for (int i = 0; i < n; i++)
      {
           if(i>0 && i<n-1 && arr[i].ff!=arr[i+1].ff && arr[i].ff!=arr[i-1].ff){
-              cout<<arr[i].ff<<" ";
              notvalid = false;
              break;
          }

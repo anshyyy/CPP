@@ -1,0 +1,1 @@
+{"name":"Local: 1487B","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1487B.cpp","tests":[{"id":1654093127198,"input":"7\n2 1\n2 2\n3 1\n3 2\n3 3\n5 5\n69 1337\n","output":""},{"id":1654093253213,"input":"4\n2 4\n5 2\n7 2\n6 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1487B.cpp","group":"local","local":true}
