@@ -14,7 +14,7 @@ using namespace std;
 void solve(){ 
      ll n,k;cin>>n>>k;
      vector<ll>a(n+1);
-     for (int i = n; i>0; i--)
+     for (ll i = n; i>0; i--)
      {
          a[n-i+1]=i;
      }
