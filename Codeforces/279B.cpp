@@ -15,7 +15,7 @@ void solve(){
          return;
      }
      int j=-1,sum=0,ans=0;
-     for (int i = 0; i <n; i++)
+     for (int i = 0; i <n; i++) // two pointers is the best
      {
          if(sum+arr[i]<=t){
              sum+=arr[i];

@@ -26,7 +26,7 @@ void solve(){
     cin>>n>>k;
     vector<ll>arr(n);
     loop(i,0,n)cin>>arr[i];
-    ll l = 0,r=n*n;
+    ll l = 0,r=1e12;
     while(r>l){
         ll m = l + (r-l)/2;
         if(!isPossible(arr,m,k)){

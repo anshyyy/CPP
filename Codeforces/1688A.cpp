@@ -12,23 +12,18 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n,k;cin>>n>>k;
-     string s;cin>>s;
-     int one = count(all(s),'1');
-     int first_1 = s.find('1');
-     int last_1 = s.find_last_of('1');
-     int add = 0;
-     if(one>0 && (n-1-last_1)<=k){
-         k-=(n-1-last_1);
-         add+=1;
-         one--;
-     }
-     if(one>0 && first_1 <=k){
-         k-=first_1;
-         add+=10;
-         one--;
-     }
-     cout<<11*one+add<<endl;
+     ll n;cin>>n;
+    //    if(n%2){
+    //        if(n>1)cout<<"1\n";
+    //        else cout<<"3\n";
+    //    } else {
+    //        if(!(n&(n-1))){
+    //            cout<<n+1<<endl;
+    //        } else {
+    //            cout<<(n&~(n-1))<<endl;
+    //        }
+    //    }
+        cout<<(n&~(n-1))<<endl;
 }
 int main() {
 IOS;
