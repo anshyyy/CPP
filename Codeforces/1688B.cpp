@@ -41,7 +41,7 @@ void solve()
         cout << "0\n";
         return;
     }
-    if (odd != 0)
+    if (odd != 0) // mixed evven and odd
     {
         cout << n - odd << endl;
         return;
@@ -50,7 +50,7 @@ void solve()
     loop(i, 0, n)
     {
         ll x = 0;
-        while (arr[i] % 2 == 0)
+        while (arr[i] % 2 == 0) 
         {
             arr[i] /= 2;
             x++;

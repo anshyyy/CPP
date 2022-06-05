@@ -1,0 +1,1 @@
+{"name":"Local: 546C","url":"d:\\C++\\CPP\\CPP\\Codeforces\\546C.cpp","tests":[{"id":1654413203493,"input":"3\n1 3\n2 1 2","output":""},{"id":1654414762883,"input":"4\n3 2 3 1\n1 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\546C.cpp","group":"local","local":true}
