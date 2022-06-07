@@ -37,8 +37,8 @@ void solve(){
         }
         pos[i+1]=ans;
     }
-    // loop(i,0,n+1)cout<<pos[i]<<" ";
-    // cout<<endl;
+    loop(i,0,n+1)cout<<pos[i]<<" ";
+    cout<<endl;
     int mini = INT_MAX;
     for (int i = 0; i <= n-k; i++)
     {
