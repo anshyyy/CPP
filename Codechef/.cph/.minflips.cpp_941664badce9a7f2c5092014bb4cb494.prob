@@ -1,0 +1,1 @@
+{"name":"Local: minflips","url":"d:\\C++\\CPP\\CPP\\Codechef\\minflips.cpp","tests":[{"id":1654698778872,"input":"4\n4\n1 1 1 1\n5\n1 -1 1 -1 1\n6\n1 -1 -1 1 1 1\n2\n1 -1\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codechef\\minflips.cpp","group":"local","local":true}

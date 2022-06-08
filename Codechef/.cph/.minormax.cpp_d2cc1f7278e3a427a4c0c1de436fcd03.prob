@@ -1,0 +1,1 @@
+{"name":"Local: minormax","url":"d:\\C++\\CPP\\CPP\\Codechef\\minormax.cpp","tests":[{"id":1654701636266,"input":"2\n5\n1 1 1 1 1 \n5\n1 2 1 2 1","output":""},{"id":1654702050657,"input":"3\n1\n343\n4\n1 1 2 3\n3\n1 3 2\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codechef\\minormax.cpp","group":"local","local":true}
