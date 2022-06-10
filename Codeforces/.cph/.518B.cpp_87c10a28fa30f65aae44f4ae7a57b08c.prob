@@ -1,0 +1,1 @@
+{"name":"Local: 518B","url":"d:\\C++\\CPP\\CPP\\Codeforces\\518B.cpp","tests":[{"id":1654686151090,"input":"3\nAbC\nDCbA\n\nABC\nabc\n\nabacaba\nAbaCaBA","output":""},{"id":1654686667769,"input":"1\nABC\nabc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\518B.cpp","group":"local","local":true}

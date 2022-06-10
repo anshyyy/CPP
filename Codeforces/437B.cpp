@@ -11,28 +11,29 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
+unsigned int ffs(int n)
+{
+    return n & -n;
+}
 void solve(){ 
-     ll n;cin>>n;
-     vector<ll>a(n),b(n);
-     loop(i,0,n){
-         cin>>a[i];
-     }
-     loop(i,0,n)cin>>b[i];
-    // ll last = -1;
-     for (int i = 0; i <n; i++)
+     int n,k;cin>>n>>k;
+     vector<int>ans(n+1);
+     int id = 0;
+     for (int i = k; i >=1&&n; i--)
      {
-         if(b[i]>a[i]){
-             cout<<b[i]-a[i]<<" "; // if it is not overlapping
-             while(i<n-1 && a[i+1]<b[i]){  // overlapping  starts and ends segment 
-                 cout<<b[i+1]- b[i]<<" ";
-                 i++;
-             }
+         int x = ffs(i);
+         if(n-x<0)continue;
+         else{
+          n-=x;
+          ans[id++]=i;
          }
-
      }
-     cout<<endl;
-     
-
+     if(n){
+         cout<<"-1\n";
+         return;}
+    cout<<id<<endl;
+    loop(i,0,id)cout<<ans[i]<<" ";
+    cout<<endl;
 }
 int main() {
 IOS;

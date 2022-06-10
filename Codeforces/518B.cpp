@@ -12,27 +12,32 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     ll n;cin>>n;
-     vector<ll>a(n),b(n);
-     loop(i,0,n){
-         cin>>a[i];
-     }
-     loop(i,0,n)cin>>b[i];
-    // ll last = -1;
-     for (int i = 0; i <n; i++)
+     unordered_map<char,int>cnt;
+     string s,t;
+     cin>>s>>t;
+     for (int i = 0; i < s.size(); i++)
      {
-         if(b[i]>a[i]){
-             cout<<b[i]-a[i]<<" "; // if it is not overlapping
-             while(i<n-1 && a[i+1]<b[i]){  // overlapping  starts and ends segment 
-                 cout<<b[i+1]- b[i]<<" ";
-                 i++;
-             }
-         }
-
+         cnt[s[i]]++;
      }
-     cout<<endl;
+     int yay = 0;
+     for(int i = 0;i<t.size();i++){
+         if(cnt[t[i]]>0){
+             yay++;
+             cnt[t[i]]--;
+         }
+     }
+     int whoops = 0;
+     for (int i = 0; i < s.size(); i++)
+     {
+         char c = t[i];
+         c = isupper(c)?c+32:c-32;
+         if(cnt[c]>0){
+             whoops++;
+             cnt[c]--;
+         }
+     }
+     cout<<yay<<" "<<whoops<<endl;
      
-
 }
 int main() {
 IOS;
