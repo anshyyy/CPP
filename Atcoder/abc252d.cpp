@@ -11,15 +11,15 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
-int c[200010];
+ll c[200010];
 void solve(){ 
-     int n;cin>>n;
-      for (int i = 0; i < n; i++)
+     ll n;cin>>n;
+      for (ll i = 0; i < n; i++)
       {
           ll x;cin>>x;
           c[x]++;
       }
-     ll ans = n*(n-1)*(n-2)/6;
+      ll ans = n*(n-1)*(n-2)/6;
       for (ll i = 1; i <=200000; i++)
       {
           ans -= c[i]*(c[i]-1)*(n-c[i])/2;
@@ -27,7 +27,7 @@ void solve(){
       }
       cout<<ans<<endl;
 }
-int main() {
+signed main() {
 IOS;
 int t=1;
 
