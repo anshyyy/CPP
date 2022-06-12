@@ -11,35 +11,23 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
- 
 void solve(){ 
-     int n;cin>>n;
-     vector<int>arr(n),temp(n);
-     int last = -1;
-     int pp = 0;
-     
-     loop(i,0,n){
-         cin>>arr[i];
-         temp[i]=arr[i];
-     }
-     if(n==1){
-         cout<<"-1\n";
-         return;
-     }
-     sort(all(temp));
-     vector<int>ans(n);
+     ll n,m;cin>>n>>m;
+     vector<ll>arr(n);
+     loop(i,0,n)cin>>arr[i];
+     ll need  = 0,sum=0;
      for (int i = 0; i < n; i++)
      {
-         if(arr[i]!=temp[i])ans[i]=temp[i];
-         else{
-             if(i<n-1)
-                swap(temp[i],temp[i+1]);
-             ans[i]=temp[i];
-         }
+          if(arr[i]<=m){
+              m-=arr[i];
+          } else{
+              need = arr[i]-m;
+              m+=need;
+              sum+=need;
+              m-=arr[i];
+          }
      }
-     if(ans[n-1]==arr[n-1])swap(ans[n-1],ans[n-2]);
-     loop(i,0,n)cout<<ans[i]<<" ";
-     cout<<endl;
+     cout<<sum<<endl;
 }
 int main() {
 IOS;

@@ -12,32 +12,28 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 void solve(){ 
-     vector<int>x(A,0),y(A,0);
-     loop(i,0,A+1){
-         int q=B[i][0];
-         if(q == 1){
-             int l = B[i][1]-1, r = B[i][2]-1;
-             for(int i=l;i<=r;i++){
-                 x[i]=x[i]^1;
-             }
+     ll n,q;cin>>n>>q;
+     vector<ll>arr(n);
+     loop(i,0,n)cin>>arr[i];
+     vector<ll>pre(n+1);
+     sort(allr(arr));
+     pre[0]=0;
+     for (int i = 1; i <n+1; i++)
+     {
+         pre[i]=arr[i-1]+pre[i-1];
+     }
+     while(q--){
+         ll x,y;cin>>x>>y;
+         if(x-y<=0){
+             cout<<pre[x]<<endl;
+             continue;
          }
-         else if(q==2){
-             int p = B[i][1];
-             for (int i = 0; i < A; i++)
-             {
-                 y[i]+=x[i]*p;
-             }
-         }
-         else if (q==3){
-             int j = B[i][1]-1;
-            cout<<y[j]<<" ";
-         }
+         cout<<pre[x]-pre[x-y]<<endl;
      }
 }
 int main() {
 IOS;
 int t=1;
-cin>>t;
 while(t--){
  solve(); 
 }
