@@ -1,0 +1,1 @@
+{"name":"Local: 1697C","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1697C.cpp","tests":[{"id":1655096432873,"input":"5\n3\ncab\ncab\n1\na\nb\n6\nabbabc\nbbaacb\n10\nbcaabababc\ncbbababaac\n2\nba\nab","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1697C.cpp","group":"local","local":true}
