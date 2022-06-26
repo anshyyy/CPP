@@ -25,7 +25,7 @@ bool hasAllCodes(string s, int k)
     for (int i = 0; i <= s.length() - k; i++)
     {
         string x = s.substr(i, k);
-        ll num = stoi(x,nullptr,2);
+        ll num = stoll(x,nullptr,2);
         mp[num]=x;
     }
 //     for(auto xx : mp){

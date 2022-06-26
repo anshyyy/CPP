@@ -12,24 +12,12 @@ const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
 long long waysToBuyPensPencils(int total, int cost1, int cost2) {
-      map<int,vector<int>>mp;
+     long long way = 0;
       for(int i = 0;i<=total/cost1;i++){
           int pencil = total - cost1*i;
-          while(pencil>=0){
-              mp[i].push_back(pencil);
-              pencil = pencil - cost2;
-          }
+          way += (pencil/cost2) +1;
       }
-      ll count =0;
-      for(auto x : mp){
-        //  cout<<x.first<<"->";
-          for(auto xx : x.second){
-          //    cout<<xx<<" ";
-              count++;
-          }
-       //   cout<<endl;
-      }
-      return count;
+      return way;
 }
 void solve(){ 
      ll a,b,c;
