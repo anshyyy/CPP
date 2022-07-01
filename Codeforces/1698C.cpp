@@ -11,53 +11,47 @@ typedef long long ll;
 const ll INF = 1e9+7;
 const ll MOD = 998244353;
 using namespace std;
- bool threeSum(vector<ll>& num,int tar) {
-        for(int i=0;i<(int)(num.size())-1;i++){
-            if(i==0||(i>0&&num[i]!=num[i-1])){
-                int lo=i+1,hi=(int)(num.size())-1,sum=tar-num[i];
-                while(lo<hi){
-                    if(num[lo]+num[hi]==sum){
-                        return true;
-                    }
-                    else if(num[lo]+num[hi]<sum) lo++;
-                    else hi--;
+void solve(){ 
+     int n;cin>>n;
+     map<ll,int>mp;
+     vector<int>arr(n);
+     bool z = true;
+     int p =0,ne=0;
+     loop(i,0,n){
+        int x;cin>>x;
+        if(x || z){
+            arr[i]=x;
+            z=false;
+        }
+        if(x>0)p++;
+        if(x<0)ne++;
+        mp[arr[i]]++;
+     }
+     if(p>2||ne>2){
+        cout<<"NO\n";
+        return;
+     }
+     n = arr.size();
+     for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            for(int k = j+1;k<n;k++){
+                bool f = false;
+                int s = arr[i]+arr[j]+arr[k];
+                for(int p = 0;p<n;p++){
+                
+                if(s==arr[p]){
+                    f = true;
+                   break;
+                }
+                }
+                if(!f){
+                    cout<<"NO\n";
+                    return;
                 }
             }
         }
-        return false;
-    }
-void solve(){ 
-  map<ll,ll>m;
-   unordered_set<int>s;
-    ll n;cin>>n;
-    vector<ll>arr(n);
-    loop(i,0,n){
-        cin>>arr[i];
-        m[arr[i]]++;
-        s.insert(arr[i]);
-    }
-    if(m.size()==1&& m[0]>0){
-        cout<<"YES\n";
-        return;
-    }
-    if(n>=5){
-        cout<<"NO\n";
-        return;
-    }
-    bool ff = false;
-    loop(i,0,n){
-        loop(j,i+1,n){
-            loop(k,j+1,n){
-              int ss = arr[i]+arr[j]+arr[k];
-              if(s.count(ss)){
-                 ff = true;
-              }
-            }
-        }
-    }
-   if(ff)cout<<"YES\n";
-   else cout<<"NO\n";
-
+     }
+     cout<<"YES\n";
 }
 int main() {
 IOS;
