@@ -9,7 +9,6 @@ for i in range(0,n):
     j-=1
     i=j
 
-print(pos)
 yes = False
 for i in range(3,n+1):
     if(i in pos):
