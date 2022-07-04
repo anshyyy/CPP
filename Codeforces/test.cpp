@@ -1,45 +1,30 @@
-#include <bits/stdc++.h>
-#define IOS ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-#define loop(i,a,n) for(int i=a;i<n;i++)
-#define all(v) (v).begin(),(v).end()
-#define all1(v) (v).begin()+1,(v).end()
-#define allr(v) (v).rbegin(),(v).rend()
-#define allr1(v) (v).rbegin()+1,(v).rend()
-#define ff first
-#define ss second
-typedef long long ll;
-const ll INF = 1e9+7;
-const ll MOD = 998244353;
+#include<bits/stdc++.h>
 using namespace std;
-void solve(){ 
-     vector<int>x(A,0),y(A,0);
-     loop(i,0,A+1){
-         int q=B[i][0];
-         if(q == 1){
-             int l = B[i][1]-1, r = B[i][2]-1;
-             for(int i=l;i<=r;i++){
-                 x[i]=x[i]^1;
-             }
-         }
-         else if(q==2){
-             int p = B[i][1];
-             for (int i = 0; i < A; i++)
-             {
-                 y[i]+=x[i]*p;
-             }
-         }
-         else if (q==3){
-             int j = B[i][1]-1;
-            cout<<y[j]<<" ";
-         }
-     }
+
+int main()
+{
+    int T;cin>>T;
+    while(T--)
+    {
+      
+    long long r, c;
+    cin >> r >> c;
+    vector<vector<long long >> matrix;
+    long long  i, j;
+    matrix.push_back({0, 1, 1, 0});
+    matrix.push_back({0, 1, 1, 0});
+    matrix.push_back({1, 0, 0, 1});
+    matrix.push_back({1, 0, 0, 1});
+    for(i=0;i<r;i++)
+    {
+        for(j=0; j<c;j++)
+        {
+            cout << matrix[i % 4][j % 4] << " ";
+        }
+        cout << endl;
+    
+    }
 }
-int main() {
-IOS;
-int t=1;
-cin>>t;
-while(t--){
- solve(); 
-}
-     return 0;
+
+    return 0;
 }
