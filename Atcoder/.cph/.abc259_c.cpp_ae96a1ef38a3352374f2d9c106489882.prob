@@ -1,0 +1,1 @@
+{"name":"Local: abc259_c","url":"d:\\C++\\CPP\\CPP\\Atcoder\\abc259_c.cpp","tests":[{"id":1657369976084,"input":"4\n\n\n\n\nabbcc\nabbbc\n\nabbaac\nabbbbaaac\n\nxyzz\nxyyzz\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Atcoder\\abc259_c.cpp","group":"local","local":true}
