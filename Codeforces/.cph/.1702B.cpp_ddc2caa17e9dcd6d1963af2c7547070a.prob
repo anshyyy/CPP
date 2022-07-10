@@ -1,0 +1,1 @@
+{"name":"Local: 1702B","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1702B.cpp","tests":[{"id":1657464481049,"input":"6\nlollipops\nstringology\nabracadabra\ncodeforces\ntest\nf","output":""},{"id":1657465359782,"input":"1\nabracadabra","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1702B.cpp","group":"local","local":true}
