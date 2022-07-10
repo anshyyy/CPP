@@ -1,0 +1,1 @@
+{"name":"Local: Ajuly","url":"d:\\C++\\CPP\\CPP\\KickStart\\Ajuly.cpp","tests":[{"id":1657430903355,"input":"2\n3 2\n5 8 9","output":""},{"id":1657430952270,"input":"1\n3 2\n5 8 9","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\KickStart\\Ajuly.cpp","group":"local","local":true}

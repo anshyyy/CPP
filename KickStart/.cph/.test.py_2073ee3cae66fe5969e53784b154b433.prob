@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"d:\\C++\\CPP\\CPP\\KickStart\\test.py","tests":[{"id":1657431942481,"input":"5\n3 2\n5 8 9\n3 2\n10 11 24\n3 4\n1 2 3\n5 4\n1 2 3 4 5\n1 0\n2\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\KickStart\\test.py","group":"local","local":true}

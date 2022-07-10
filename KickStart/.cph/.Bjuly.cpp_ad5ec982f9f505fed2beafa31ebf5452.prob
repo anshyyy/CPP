@@ -1,0 +1,1 @@
+{"name":"Local: Bjuly","url":"d:\\C++\\CPP\\CPP\\KickStart\\Bjuly.cpp","tests":[{"id":1657437369114,"input":"2\n3\n3 1 2\n4\n2 8 1 9\n5\n4\n1 100 4 3\n6\n15 10 12 5 1 10\n6\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\KickStart\\Bjuly.cpp","group":"local","local":true}
