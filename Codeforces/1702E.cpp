@@ -58,10 +58,10 @@ void solve(){
          }
          i++;
      }
-    //   for(auto s : pres2){
-    //     cout<<s<<" ";
-    //  }
-    //  cout<<endl;
+      for(auto s : pres2){
+        cout<<s<<" ";
+     }
+     cout<<endl;
      if(pres.size()==n && pres2.size()==n){
         cout<<"YES\n";
      }
