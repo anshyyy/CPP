@@ -1,0 +1,1 @@
+{"name":"Local: 1708B","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1708B.py","tests":[{"id":1657987997996,"input":"4\n5 1 5\n9 1000 2000\n10 30 35\n1 1000000000 1000000000","output":""},{"id":1657988054567,"input":"1\n9 1000 2000","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1708B.py","group":"local","local":true}

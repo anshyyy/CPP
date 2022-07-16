@@ -80,7 +80,7 @@ void solve()
 
     for (int i = 0; i < n; i++)
     {
-        if (nums[i].size() == 1)
+        if (nums[i].size() == 1) 
         {
             cout << "0";
             continue;
