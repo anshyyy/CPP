@@ -1,0 +1,1 @@
+{"name":"Local: palindromemake","url":"d:\\C++\\CPP\\CPP\\Codechef\\palindromemake.cpp","tests":[{"id":1658072894966,"input":"3\n6\naabbaa\n4\nabcd\n6\nzzxyyx\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codechef\\palindromemake.cpp","group":"local","local":true}
