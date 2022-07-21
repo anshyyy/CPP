@@ -18,11 +18,11 @@ void solve()
 {
     ll n, l, r;
     cin >> n >> l >> r;
-    if (r - l + 1 < n)
-    {
-        cout << "NO\n";
-        return;
-    }
+    // if (r - l + 1 < n)
+    // {
+    //     cout << "NO\n";
+    //     return;
+    // }
     vector<ll> ans;
     for (int i = 1; i <= n; i++)
     {
