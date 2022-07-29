@@ -1,0 +1,1 @@
+{"name":"Local: abc261_c","url":"d:\\C++\\CPP\\CPP\\Atcoder\\abc261_c.cpp","tests":[{"id":1659104155104,"input":"2\n5\nnewfile\nnewfile\nnewfolder\nnewfile\nnewfolder\n\n11\na\na\na\na\na\na\na\na\na\na\na\n\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Atcoder\\abc261_c.cpp","group":"local","local":true}

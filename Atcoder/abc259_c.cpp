@@ -14,55 +14,40 @@ using namespace std;
 void solve(){ 
      string s,t;
      cin>>s>>t;
-     if(s==t){
-        cout<<"Yes\n";
-        return;
-     }
-     ll sn = s.size();
-     ll tn = t.size();
-     vector<pair<char,ll>>pos_s,pos_t;
-     for(ll i =0;i<sn;i++){
-        ll j = i;
-        while(j<sn && s[i]==s[j])j++;
-        pos_s.push_back({s[i],j-i});
+     vector<int>pos1;
+     for (int i = 0; i < t.size(); i++)
+     {
+        int j = i;
+        while(j<t.size()&&t[i]==t[j]){
+            j++;
+        }
+        pos1.push_back(j-i);
         j--;
         i=j;
      }
-     for(ll i = 0;i<tn;i++){
-        ll j = i;
-        while(j<tn && t[i]==t[j])j++;
-        pos_t.push_back({t[i],j-i});
-        j--;
-        i = j;
+     vector<int>pos2;
+     for (int i = 0; i < s.size(); i++)
+     {
+         int j = i;
+         while(j<s.size() && s[i]==s[j]) j++;
+         pos2.push_back(j-i);
+         j--;
+         i=j;
      }
-
-    //  (pos_s==pos_t)?cout<<"Yes\n":cout<<"No\n";
-    if(pos_s.size()!=pos_t.size()){
-        cout<<"No\n";
+     if(pos1.size() != pos2.size()){
+        cout<<"NO\n";
         return;
-    }
-    for(ll i =0;i<(ll)pos_s.size();i++){
-        if(pos_s[i].ff != pos_t[i].ff){
-            cout<<"No\n";
-            return;
-        }
-        if(pos_s[i].ff==pos_t[i].ff ){
-            ll x = pos_s[i].ss;
-            ll y = pos_t[i].ss;
-            if(x>=2 && y>=2){
-                
-            }
-            else if(x==y){
-
-            }
-            else{
-                cout<<"No\n";
+     }
+     for (int i = 0; i < pos1.size(); i++)
+     {
+        if(pos1[i] == 1 || pos2[i] == 1){
+            if(pos1[i]!=pos2[i]){
+                cout<<"NO\n";
                 return;
             }
         }
-    }
-    cout<<"Yes\n";
-
+     }
+     cout<<"YES\n";
 }
 int main() {
 IOS;
