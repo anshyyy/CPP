@@ -1,0 +1,1 @@
+{"name":"Local: 1714E","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1714E.cpp","tests":[{"id":1659449120731,"input":"10\n2\n6 11\n3\n2 18 22\n5\n5 10 5 10 5\n4\n1 2 4 8\n2\n4 5\n3\n93 96 102\n2\n40 6\n2\n50 30\n2\n22 44\n2\n1 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1714E.cpp","group":"local","local":true}
