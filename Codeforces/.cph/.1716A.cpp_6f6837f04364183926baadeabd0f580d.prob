@@ -1,0 +1,1 @@
+{"name":"Local: 1716A","url":"d:\\C++\\CPP\\CPP\\Codeforces\\1716A.cpp","tests":[{"id":1659624255548,"input":"6\n1\n3\n4\n8\n12\n16\n17","output":""},{"id":1659624685523,"input":"5\n4\n7\n11\n10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Codeforces\\1716A.cpp","group":"local","local":true}
