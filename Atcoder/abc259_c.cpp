@@ -35,19 +35,19 @@ void solve(){
          i=j;
      }
      if(pos1.size() != pos2.size()){
-        cout<<"NO\n";
+        cout<<"No\n";
         return;
      }
      for (int i = 0; i < pos1.size(); i++)
      {
         if(pos1[i] == 1 || pos2[i] == 1){
             if(pos1[i]!=pos2[i]){
-                cout<<"NO\n";
+                cout<<"No\n";
                 return;
             }
         }
      }
-     cout<<"YES\n";
+     cout<<"Yes\n";
 }
 int main() {
 IOS;
