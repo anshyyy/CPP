@@ -14,28 +14,15 @@ using namespace std;
 void printarr(int arr[],int n){loop(i,0,n){cout<<arr[i]<<" ";}cout<<endl;}
 void printvec(vector<int>&arr){loop(i,0,arr.size()){cout<<arr[i]<<" ";}cout<<endl;}
 void solve(){ 
-    int n;cin>>n;
-    vector<int>arr(n);
-    loop(i,0,n){
-      arr[i] = i+1;
-    }
-    vector<vector<int>>ans;
-    int sp = 1;
-    loop(i,0,n){
-      ans.push_back(arr);
-      if(sp>=n) break;
-      else{
-         swap(arr[sp],arr[0]);
-         sp++;
-      }
-    }
-    cout<<ans.size()<<endl;
-    for(auto a : ans){
-      for(auto i : a){
-         cout<<i<<" ";
-      }
-      cout<<endl;
-    }
+     ll n;
+     cin>>n;
+     ll rem = n%11;
+     n -= 111*rem;
+     if(n>=0 && n%11==0){
+        cout<<"YES\n";
+        return;
+     }
+     cout<<"NO\n";
 }
 int main() {
 IOS;
@@ -44,5 +31,5 @@ cin>>t;
 while(t--){
  solve(); 
 }
-    return 0;
+     return 0;
 }
