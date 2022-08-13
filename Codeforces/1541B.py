@@ -9,7 +9,7 @@ def solve():
          pro = i*j
          id1 = mp.get(i)
          id2 = mp.get(j)
-         if(id1==-1 or id2==-1): continue
+         if(id1==None or id2==None): continue
          if(mp.get(i)+mp.get(j) == pro):
             ans+=1
 

@@ -6,7 +6,7 @@ def solve():
   else:
     arr.sort()
     pos = -1
-    mini = 1000000
+    mini = 1000000000
     for i in range(1,n):
         if mini > abs(arr[i-1]-arr[i]):
             pos = i

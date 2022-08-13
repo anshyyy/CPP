@@ -13,42 +13,27 @@ const ll MOD = 998244353;
 using namespace std;
 void printarr(int arr[],int n){loop(i,0,n){cout<<arr[i]<<" ";}cout<<endl;}
 void printvec(vector<int>&arr){loop(i,0,arr.size()){cout<<arr[i]<<" ";}cout<<endl;}
-
-bool check(ll m,int n,vector<int>&arr){
-    vector<int>temp = arr;
-    unordered_map<ll,bool>mp;
-    ll cnt = 0;int i =0;
-    while(i<n && cnt<m){
-        if(!mp.count(temp[i]))
-        cnt++;
-        mp[temp[i]]=true;
-        temp[i]=0;
-        i++;
-    }
-    while(i<n){
-        if(mp.count(temp[i]))temp[i++]=0;
-    }
-    return is_sorted(all(temp));
-}
 void solve(){ 
-     int n;cin>>n;
+     int n,k;cin>>n>>k;
      vector<int>arr(n);
-     ll ans = 0;
-     set<ll>s;
-     loop(i,0,n){
-        cin>>arr[i];
+     set<int>s;
+     loop(i,0,n)cin>>arr[i];
+     loop(i,0,k){
         s.insert(arr[i]);
      }
-     ll l = 0;
-     ll h = s.size();
-     while(l<=h){
-        ll mid = l + (h-l)/2;
-        if(check(mid,n,arr)){
-            h = mid-1;
-            ans=mid;
-        } else l = mid+1;
+     if(n==k){
+        cout<<"0\n";
+        return;
+     }
+     sort(all(arr));
+     int ans =0;
+     for (int i = 0; i < k; i++)
+     {
+        if(!s.count(arr[i]))ans++;
      }
      cout<<ans<<endl;
+
+
 }
 int main() {
 IOS;
