@@ -14,33 +14,10 @@ using namespace std;
 void printarr(int arr[],int n){loop(i,0,n){cout<<arr[i]<<" ";}cout<<endl;}
 void printvec(vector<int>&arr){loop(i,0,arr.size()){cout<<arr[i]<<" ";}cout<<endl;}
 void solve(){ 
-   int n,m;cin>>n>>m;
-   vector<int>arr(n+1);
-   loop(i,1,n+1){
-     cin>>arr[i];
-     arr[i]%=m;
-   }
-   if(n>=m){
-    cout<<"YES\n";
-    return;
-   }
-   vector<vector<bool>>dp(n+1,vector<bool>(m+1));
-   for(int i=1;i<=n;i++)
-      dp[i][arr[i]] = 1;
-
-   for (int i = 2; i <= n; i++)
-   {
-      for (int j = 0; j < m; j++)
-      {
-        if(dp[i][j])continue;
-        if(dp[i-1][j]){
-          dp[i][j]=dp[i-1][j];
-          continue;
-        }
-        dp[i][j] = dp[i-1][(j-arr[i]+m)%m];
-      }
-   }
-   cout<<(dp[n][0] ? "YES":"NO");
+     int n;cin>>n;
+     vector<int>arr(n);
+     loop(i,0,n)cin>>arr[i];
+     cout<<max_element(all(arr))-arr.begin()+1<<endl;
 }
 int main() {
 IOS;
@@ -49,5 +26,5 @@ cin>>t;
 while(t--){
  solve(); 
 }
-   return 0;
+     return 0;
 }

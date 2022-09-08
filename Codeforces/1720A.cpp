@@ -14,7 +14,7 @@ using namespace std;
 void printarr(int arr[],int n){loop(i,0,n){cout<<arr[i]<<" ";}cout<<endl;}
 void printvec(vector<int>&arr){loop(i,0,arr.size()){cout<<arr[i]<<" ";}cout<<endl;}
 void solve(){ 
-     double a,b,c,d;
+     ll a,b,c,d;
      cin>>a>>b>>c>>d;
      
      ll ad = a*d;
