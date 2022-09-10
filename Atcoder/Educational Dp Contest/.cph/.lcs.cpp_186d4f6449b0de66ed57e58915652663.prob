@@ -1,0 +1,1 @@
+{"name":"Local: lcs","url":"d:\\C++\\CPP\\CPP\\Atcoder\\Educational Dp Contest\\lcs.cpp","tests":[{"id":1662829400672,"input":"2\naxyb\nabyxb\naa\nxayaz","output":""},{"id":1662829494824,"input":"1\nxayaz\naa","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Atcoder\\Educational Dp Contest\\lcs.cpp","group":"local","local":true}
