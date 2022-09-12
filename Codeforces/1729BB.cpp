@@ -14,28 +14,28 @@ using namespace std;
 void printarr(int arr[],int n){loop(i,0,n){cout<<arr[i]<<" ";}cout<<endl;}
 void printvec(vector<int>&arr){loop(i,0,arr.size()){cout<<arr[i]<<" ";}cout<<endl;}
 void solve(){ 
-     ll ss ; cin >> ss ; string s ; cin >> s ;
-        string ssss = "" ; stack<char> sssss ;
-        for(int i=0;i<ss;i++){
-            sssss.push(s[i]);
+     int n;cin>>n;
+     string s;cin>>s;
+     string ans= "";
+     stack<char>st;
+     for(auto x : s)st.push(x);
+     while(!st.empty()){
+        int tt = st.top()-'0';
+        st.pop();
+        if(tt!=0){
+            ans+=(tt-1+'a');
+        } else{
+            int up = st.top()-'0';
+            st.pop();
+            int up1 = st.top()-'0';
+            st.pop();
+            int res = (up1*10)+up;
+          //  cout<<res<<endl;
+            ans+=(res-1+'a');
         }
-        while(!sssss.empty()){
-            int sss=sssss.top()-'0';
-            sssss.pop();
-            if(sss!=0){
-                ssss+=(sss - 1 + 'a');
-            }
-            else{
-                int aa=sssss.top()-'0';
-                sssss.pop();
-                int a=sssss.top()-'0';
-                sssss.pop();
-                int ssssss=a*10+aa;
-                ssss+=(ssssss - 1 + 'a');
-            }
-        }
-        reverse(ssss.begin(),ssss.end());
-        cout << ssss << endl;
+     }
+     reverse(all(ans));
+    cout<<ans<<endl;    
 }
 int main() {
 IOS;

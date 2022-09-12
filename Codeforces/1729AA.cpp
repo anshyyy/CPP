@@ -14,28 +14,17 @@ using namespace std;
 void printarr(int arr[],int n){loop(i,0,n){cout<<arr[i]<<" ";}cout<<endl;}
 void printvec(vector<int>&arr){loop(i,0,arr.size()){cout<<arr[i]<<" ";}cout<<endl;}
 void solve(){ 
-     ll ss ; cin >> ss ; string s ; cin >> s ;
-        string ssss = "" ; stack<char> sssss ;
-        for(int i=0;i<ss;i++){
-            sssss.push(s[i]);
-        }
-        while(!sssss.empty()){
-            int sss=sssss.top()-'0';
-            sssss.pop();
-            if(sss!=0){
-                ssss+=(sss - 1 + 'a');
-            }
-            else{
-                int aa=sssss.top()-'0';
-                sssss.pop();
-                int a=sssss.top()-'0';
-                sssss.pop();
-                int ssssss=a*10+aa;
-                ssss+=(ssssss - 1 + 'a');
-            }
-        }
-        reverse(ssss.begin(),ssss.end());
-        cout << ssss << endl;
+     ll a,b,c;
+     cin>>a>>b>>c;
+     ll first = abs(a-1);
+     ll sec = abs(c-b) + abs(c-1);
+    // cout<<first<<" "<<sec<<endl;
+     if(first>sec){
+        cout<<"2\n";
+     } else if(sec>first){
+        cout<<"1\n";
+     }
+     else cout<<"3\n";
 }
 int main() {
 IOS;
