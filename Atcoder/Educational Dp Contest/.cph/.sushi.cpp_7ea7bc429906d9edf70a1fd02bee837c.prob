@@ -1,0 +1,1 @@
+{"name":"Local: sushi","url":"d:\\C++\\CPP\\CPP\\Atcoder\\Educational Dp Contest\\sushi.cpp","tests":[{"id":1663041821168,"input":"3\n1 1 1","output":""},{"id":1663042049149,"input":"10\n1 3 2 3 3 2 3 2 1 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\CPP\\CPP\\Atcoder\\Educational Dp Contest\\sushi.cpp","group":"local","local":true}
