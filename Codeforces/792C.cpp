@@ -37,7 +37,7 @@ void solve(){
           temp = s;
           temp.erase(pos[sum].back(),1);
           rem(temp);
-          cout<<temp<<endl;
+          
           if(temp.size()>ans.size()) ans = temp;
        }
        if(pos[3-sum].size()>=2){
