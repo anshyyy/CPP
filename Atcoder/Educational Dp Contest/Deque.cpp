@@ -17,12 +17,14 @@ ll n;
 const int N = 3001;
 ll arr[N];
 ll dp[N][N][2];
+// we are only considering the scores of Taro
 ll rec(int i,int j,int turn){
     //Pruning
     if(i>j) return 0;
     if(i==j){
         return !turn?arr[i]:0;
     }
+    //cache
     if(dp[i][j][turn]!=-1){
         return dp[i][j][turn]; 
     }

@@ -1,10 +1,11 @@
 from functools import cache
 
+
 def solve(): 
     n = int(input())
     arr = [int(x) for x in input().split()]
   
-    
+    @cache
     def rec(i,j):
         if i == j:
             return arr[i]

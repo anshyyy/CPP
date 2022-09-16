@@ -25,7 +25,7 @@ void solve(){
          for (ll j = 0; j < n; j++)
          {
               if(arr[j]<=i){
-                (dp[i] += dp[i-arr[j]]) ;
+                (dp[i] += dp[i-arr[j]]) %=INF;
               }
          }
      }
