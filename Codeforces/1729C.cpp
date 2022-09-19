@@ -33,7 +33,7 @@ void solve()
     mp.clear();
     cin >> s;
     int n = s.size();
-       loop(i,1,n-1)  mp[s[i]].push_back(i + 1);
+    loop(i,1,n-1)  mp[s[i]].push_back(i + 1);
     if (s[0] > s[n - 1])
     {
          for (auto i = s[0]; i >= s[n - 1]; i--)

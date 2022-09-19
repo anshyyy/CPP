@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define IOS ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-#define loop(i,a,n) for(ll i=a;i<n;i++)
+#define loop(i,a,n) for(int i=a;i<n;i++)
 #define all(v) (v).begin(),(v).end()
 #define all1(v) (v).begin()+1,(v).end()
 #define allr(v) (v).rbegin(),(v).rend()
@@ -14,27 +14,25 @@ using namespace std;
 void printarr(int arr[],int n){loop(i,0,n){cout<<arr[i]<<" ";}cout<<endl;}
 void printvec(vector<int>&arr){loop(i,0,arr.size()){cout<<arr[i]<<" ";}cout<<endl;}
 void solve(){ 
-   ll a,b;
-   loop(i,1,8)
-   loop(j,i+1,8){
-         cout << "? " << i << ' ' << j << endl;
-         cin >> a;
-         cout << "? " << j << ' ' << i << endl;
-         cin >> b;
-         if(a==-1) {
-            cout << "! " << max(i,j)-1 << endl;
-            return ;
-         }
-         if(a!=b) {
-            cout << "! " << a+b << endl;
-            return;
-         }
-      }
+     ll n,k;cin>>n>>k;
+     vector<int>arr(n+1);
+     loop(i,1,n+1)cin>>arr[i];
+     vector<int>b(111,0);
+     for (int i =1; i <n+1; i++)
+     {
+        b[i%k] = max(b[i%k],arr[i]);
+     }
+     ll ans = 0;
+     for (int i = 0; i < k; i++)
+     {
+        ans+=b[i];
+     }
+     cout<<ans<<endl;
 }
-signed main() {
+int main() {
 IOS;
 int t=1;
-
+cin>>t;
 while(t--){
  solve(); 
 }

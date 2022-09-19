@@ -25,7 +25,7 @@ def solve():
             ans = mid
             high = mid-0.001
         else:
-            low =mid + 0.001
+            low = mid + 0.001
     # print(high , low)
     print("%.1f"%ans)
 

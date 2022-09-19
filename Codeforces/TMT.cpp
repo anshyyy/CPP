@@ -1,66 +1,77 @@
 #include <bits/stdc++.h>
-#define IOS                           \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);
-#define ll long long int
+
 using namespace std;
+
+#define ll long long int
+#define endl '\n'
+
 void solve()
 {
-    int n;
-    cin >> n;
-    string str;
-    cin >> str;
+    ll n, x, y;
+    cin >> n >> x >> y;
 
-    if (n <= 3)
+    string a, b;
+    cin >> a >> b;
+    vector<ll> v;
+
+    for (ll i = 0; i < n; i++)
     {
-        for (int i = 0; i < n; i++)
+        if (a[i] != b[i])
         {
-            if (str[i] == 'T' && str[i + 1] == 'M' && str[i + 2] == 'T')
+            v.push_back(i);
+        }
+    }
+
+    if (v.size() % 2 == 1)
+    {
+        cout << -1 << endl;
+        return;
+    }
+
+    if (v.size() == 2)
+    {
+        if (v[0] + 1 == v[1])
+        {
+
+            if (n == 2 || n == 3)
             {
-                cout << "YES" << endl;
-                break;
+                cout << x << endl;
+            }
+            else if (n == 4)
+            {
+                if (v[0] == 1)
+                {
+                    cout << x << endl;
+                }
+                else
+                {
+                    cout << min(2y, x) << endl;
+                }
             }
             else
             {
-                cout << "NO" << endl;
-                break;
+                cout << min(2y, x) << endl;
             }
         }
-    }
-    int t = 0, m = 0;
-    if (n > 3)
-    {
-
-        for (int i = 0; i < n; i++)
+        else
         {
-            if (str[i] == 'T')
-            {
-                t++;
-            }
-            else
-            {
-                m++;
-            }
+            cout << y << endl;
         }
+        return;
+    }
 
-    if (t == 2 * m)
-    {
-        cout << "YES" << endl;
-    }
-    else
-    {
-        cout << "NO" << endl;
-
-    }
-    }
+    cout << ((v.size() / 2) * y) << endl;
 }
+
 int main()
 {
-    int t;
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int t = 1;
     cin >> t;
     while (t--)
     {
         solve();
     }
-    return 0;
 }
+L
