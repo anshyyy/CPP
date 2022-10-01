@@ -9,29 +9,25 @@
 #define ss second
 typedef long long ll;
 const ll INF = 1e9+7;
-const ll mod = 998244353;
+const ll MOD = 998244353;
 using namespace std;
 void printarr(int arr[],int n){loop(i,0,n){cout<<arr[i]<<" ";}cout<<endl;}
 void printvec(vector<int>&arr){loop(i,0,arr.size()){cout<<arr[i]<<" ";}cout<<endl;}
 void solve(){ 
-     ll n,k;
-     cin>>n>>k;
-     vector<ll>arr(n+1,0);
-     loop(i,1,n+1)cin>>arr[i];
-     vector<ll>dp(k+1,0);
-     dp[0] = 1;
-     for (ll i = 1; i <= k; i++)
-     {
-         for (ll j = 0; j < n; j++)
-         {
-              if(arr[j]<=i){
-                dp[i] += dp[i-arr[j]];
-                dp[i] = (mod+dp[i])%mod;
-              }
-         }
+     int n,q;
+     cin>>n>>q;
+     vector<vector<int>>arr;
+     while(n--){
+        int k;cin>>k;
+        vector<int>t(k);
+        loop(i,0,k)cin>>t[i];
+        arr.push_back(t);
      }
-     cout<<dp[k]<<endl;
-     
+     while(q--){
+        int row,id;
+        cin>>row>>id;
+        cout<<arr[row-1][id-1]<<endl;
+     }
 }
 int main() {
 IOS;
