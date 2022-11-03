@@ -20,7 +20,6 @@ void inverseN(ll x){
   {
        ninv[i]=ninv[x%i]*(x-x/i)%x;
   }
-  
 }
 void inversefac(ll x){
     inv[0]=inv[1]=1;
