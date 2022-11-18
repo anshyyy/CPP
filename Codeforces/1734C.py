@@ -11,8 +11,7 @@ def solve():
       for j in range(i,n+1,i):
         if(a[j]==1):break
         dp[j] = i
-  print(a)
-  print(dp)
+
   for i in range(1,len(s)+1):
        if(a[i]==0):
            ans += dp[i]
